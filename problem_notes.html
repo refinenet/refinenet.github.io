@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>
+2nd RefineNet Meeting - Problems
+</title>
+</head>
+
+<body>
+<h1>2nd RefineNet Meeting - Problems</h1>
+<h2>13-14 May 2005</h2>
+
+
+<h3>Wilson Ifill: Code generation</h3>
+
+<dl>
+<dt>Novice user problem 
+<dd>How to get novice users going in the right direction
+    when starting to use a tool, even if they don't read the manual.
+<dt>Reduce maintenance costs
+<dd>Code generation is a
+    promising way to save costs on maintenance (which may be up to
+    four times original development cost) - keep code and spec 
+    more closely aligned.
+<dt>Library tweaking
+<dd>While developing, you end up going back to the libraries
+    of the translator and tweaking
+    them for a while.  Until they're frozen you don't win.
+    How to freeze as early as possible?
+<dt>Tool assurance
+<dd>If tool tweaking not done by user, but by
+    supplier - do we trust supplier?  UK Defence Standard
+    00-55 vs DO-178B: how do we support those standards?
+<dt>Proving the right thing
+<dd>UK Defence Standard 00-55 mandates formal techniques and
+    independent proof checking - but how do you know that 
+    you've proved the right things?  Are your proofs adequate 
+    and complete? can you match up VCs to specifications?
+</dl>
+
+<h3>Michael Leuschel: Pro-B</h3>
+
+<dl>
+<dt>User feedback
+<dd>It would be very useful to have feedback from workshop 
+    on refinement using Pro-B.
+<dt>Efficient refinement checking
+<dd>What are the issues about designing specifications
+which are to be refined; what makes them efficient/
+inefficient to check?
+<dt>Exploration
+<dd>What are useful ways to explore specifications?
+ Look at lazy exploring of refinement.
+<dt>B standard
+<dd>Arising out of the RODIN project - there is some talking
+about a real B standard (as opposed to just the B Book?)
+How should this be formulated?  Does Z set a good or bad
+precedent for this?
+</dl>
+ 
+
+<h3>Martin Henson: Grand Challenge Workshop (GC6)</h3>
+  
+<dl>
+<dt>Contexts for refinement
+<dd>Think about refinement in the broader context of evolution,
+  integrating with high-level system architecture.  There is
+  expertise in RefineNet (and associated departments) on this.
+<dt>A Grand Vision for refinement
+<dd>GC6 only has one big theme, big project
+  (the verifying compiler) - idea with long pedigree. 
+  Since GC supposed to last 15-20 years with
+  an outstanding vision - vision seemed to be very limited in most
+  submissions, very parochial and personal.  Can we do better?
+  e.g. <ul>
+   <li> "Crash-proofing the national information infrastructure" 
+   <li> "Raise developer productivity by a factor of 10"
+  </ul>
+</dl>
+
+<h3>Adrian Hilton: Refine to Diverse Hardware</h3>
+
+<dl>
+<dt>Premature detail in specification
+<dd>Get the customer to tell us <em>what</em> to do rather than
+    <em>how</em> to do it.
+<dt>Retro-formalising
+<dd>Translate a formalised requirement back into an English 
+    text - is it useful?  Reformulation?
+    Maybe animate it and let the customer go off and play with 
+    this; does it pay back?
+<dt>Completeness
+<dd>How to establish completeness of requirements given the specification
+   (NB lots of work done on requirements capture).
+<dt>Retrenching a specification
+<dd>Retrenchment allows people to make partial, imprecisely fitting
+    models, then pull it back and forward to a specification.
+    Can we make this pay off in concrete examples.
+<dt>Timing and preemption in real systems
+<dd>There are different notions of clocks in different parts of
+    a typical real-time system (e.g. bus, microprocessor, ASICs).
+    Abstract "something may come in" and you chose an appropriate
+    operation to get the required output.  But in a refinement,
+    in one clock cycle you may only be able to do 2/3 of this task,
+    then a Built-In-Test (BIT) may come in and wreck the invariant.
+    This comes down to having some information about what the
+    RTOS or tasking profile provides.  E.g., hiding may be appropriate
+    but we don't know prima facie enough about the system CBIT/IBIT
+<dt>RTOS API
+<dd>Most embedded systems run on a Real Time Operating System (RTOS)
+    which provides essential system services.  Refining to this target
+    produces the problem of what the RTOS API looks like in a
+    formal model.  How do we get the vendors to write a spec in a
+    generally useful way?
+<dt>Invariant violation
+<dd>If the spec for a system is in terms of outputs vs inputs, and 
+    the system may shutdown, there
+    may be a violation of the invariant in the shutdown path - we need
+    to deal with this.  The
+    more general problem is that you often go back and rework the safety
+    spec after implementation, weakening it as a result of handling errors
+    in the code where the error handling breaks the spec
+<dt>Refinement payoff
+<dd>Draw the boundary for where refinement is appropriate in 
+ a system, and where it's not enough of a payback.
+</dl>
+
+<h3>David Crocker: Building a Refinement Tool for Software Development</h3>
+
+<dl>
+<dt>Data storage in external subsystem
+<dd>Example of stock control - want to hold stock info in an external database
+     rather than an internal variable 
+    Need to refine abstract data to data in an external system -
+    refinement no longer valid if no other agent interferes with data,
+    also need to manage errors (e.g. n/w failure)
+<dt>Specifying and refining concurrent systems
+<dd>Big problem - how to refine a spec to a multithreaded implementation,
+   how to express it in a programmer-friendly notation? 
+   More difficult because parallel programming facilities in the
+   various target languages aren't that alike.
+   C++/Java threading models - C++ probably Posix, but that means
+   a lot of work in generation from a common Perfect-Developer language
+   program.  Applicable generally to refinement - need to decide what
+   we want to refine *to*.
+<dt>GUIs and user interaction
+<dd>How do you specify/refine to a system like this?
+   Specialist tools are usually required for GUI programming; 
+   on the other hand, you'd like to be able to 
+   specify the behaviour.
+<dt>Reusing unspecified libraries
+<dd>Similar problem to RTOS API; either you need to develop your
+   own libraries, or to retro-specify existing ones.
+   Associated with that, libraries moving under the project's
+   feet is an issue.  Retro-spec is a
+   a serious problem - probably infeasible automatically.
+</dl>
+
+</body>
+</html>

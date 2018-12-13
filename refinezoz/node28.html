@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.55)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bibliographical Notes</TITLE>
+<META NAME="description" CONTENT="Bibliographical Notes">
+<META NAME="keywords" CONTENT="root">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="root.css">
+
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node29.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html322"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html320"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html316"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html323"
+  HREF="node29.html">Non-Atomic Refinement</A>
+<B> Up:</B> <A NAME="tex2html321"
+  HREF="node26.html">Weak Refinement</A>
+<B> Previous:</B> <A NAME="tex2html317"
+  HREF="node27.html">Erratum</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001120000000000000000"></A>
+<A NAME="ch:weak:sec:related"></A>
+<BR>
+Bibliographical Notes
+</H1>
+
+<P>
+The use of internal operations in Z is not new, representative examples
+include 
+[<A
+ HREF="node45.html#Cusack92a">55</A>,<A
+ HREF="node45.html#wezeman">205</A>,<A
+ HREF="node45.html#Rafsan94">168</A>,<A
+ HREF="node45.html#Strulo95">197</A>,<A
+ HREF="node45.html#Woodcock96">209</A>,<A
+ HREF="node45.html#Derrick96a">67</A>].  
+For example, Strulo [<A
+ HREF="node45.html#Strulo95">197</A>] considers the use of Z in network
+management and 
+describes the need for both observable and internal operations in this
+application area. A particular example is described of a network manager's view
+of a router within a network. There, alarm notifications are a typical example
+of internal events which are specified as usual but with informal commentary
+describing which operations are observable and which are internal. A similar
+approach and application area is described by Wezeman and Judge in [<A
+ HREF="node45.html#wezeman">205</A>] and
+Rafsanjani in [<A
+ HREF="node45.html#Rafsan94">168</A>].
+
+<P>
+Cusack and Wezeman in [<A
+ HREF="node45.html#Cusack92a">55</A>] adopt a number of conventions for the
+use of Z for 
+the specification of OSI network management standards. In particular, they make
+the distinction between internal and observable operations according to whether
+an operation has input/output, all operations without input or output variables
+are considered internal, all others are observable. 
+Their work is placed in an object-oriented setting and they consider notions
+of subtyping based upon conformance instead of refinement. 
+
+<P>
+Evans in [<A
+ HREF="node45.html#Evans97a">81</A>] considers the use of Z for the specification
+of parallel systems, and in particular discusses issues of liveness and
+fairness in dynamic
+specifications. Informal commentary partitions the specification into internal
+and observable operations, and
+Evans considers the refinement relations needed for Z specifications of
+concurrent systems.
+
+<P>
+Similar work to that described in this chapter has appeared in other
+state-based formalisms. For example,  
+Butler [<A
+ HREF="node45.html#Butler97a">43</A>]
+considers the specification and refinement of internal actions in the
+B<A NAME="641"></A> method. 
+The email specification in Example 11.2.5above is adapted from
+a B specification given in [<A
+ HREF="node45.html#Butler99a">45</A>].
+Additional work in this area also includes the work of Lano,
+e.g., [<A
+ HREF="node45.html#Lano97a">142</A>], and the time service example has been specified in B in
+[<A
+ HREF="node45.html#Lano99a">143</A>].
+The work described in this chapter first appeared in
+[<A
+ HREF="node45.html#Derrick98a">69</A>,<A
+ HREF="node45.html#Derrick97a">68</A>].
+
+<P>
+Other formalisms, such as TLA<A NAME="646"></A> and automata<A NAME="647"></A>, 
+have a long history of
+using stuttering steps to verify refinements involving internal actions, see,
+for example, [<A
+ HREF="node45.html#Abadi91">1</A>,<A
+ HREF="node45.html#Lynch93">185</A>]. 
+These languages take a different approach to the introduction of livelock by
+using fairness criteria on the observable operations. 
+For example, in [<A
+ HREF="node45.html#Lynch93">185</A>] liveness conditions are used to describe which
+executions of the automaton are considered to represent a properly working
+system. 
+The use of such liveness conditions or fairness criteria provide a language
+which is strictly more expressive than Z, since we cannot write a Z
+specification with an infinitely often enabled internal operation that does
+not involve livelock. 
+
+<P>
+In [<A
+ HREF="node45.html#Lynch93">185</A>] Sogaard-Andersen, Lynch and Lampson demonstrate the
+correctness of reliable 
+at-most-once message delivery protocols using timed I/O automata.
+In particular, two protocol refinements are verified: a clock-based protocol
+and a five-packet handshake protocol.
+The verification of these refinements is split into a number of stages, with
+the two implementations being downward simulations of an intermediate
+description, which itself is an upward simulation of the original problem
+specification.
+
+<P>
+In addition to its size, the case study is interesting because it is necessary
+to use an upward simulation in the verification. It also verifies a timed
+model (the clock 
+protocol) against the untimed problem statement by using  various embedding
+results to move between the models.
+The specifications in Example 11.4.1are simplified versions
+of parts of this case study.
+
+<P>
+Stuttering steps have also been used in action systems<A NAME="651"></A> 
+[<A
+ HREF="node45.html#Back89a">13</A>,<A
+ HREF="node45.html#Back88a">12</A>] to verify refinements with internal actions.
+Back and von Wright in [<A
+ HREF="node45.html#Back94a">14</A>] define refinement in terms of the
+execution 
+traces of an action system. Forward and backward simulation methods are then
+described which explicitly deal with internal (i.e., stuttering) actions.
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html322"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html320"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html316"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html323"
+  HREF="node29.html">Non-Atomic Refinement</A>
+<B> Up:</B> <A NAME="tex2html321"
+  HREF="node26.html">Weak Refinement</A>
+<B> Previous:</B> <A NAME="tex2html317"
+  HREF="node27.html">Erratum</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+E.A.Boiten
+2002-11-22
+</ADDRESS>
+</BODY>
+</HTML>

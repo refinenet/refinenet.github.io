@@ -1,0 +1,1219 @@
+\begin{thebibliography}[Bibliography]{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibitem{Abadi91}
+M.~Abadi and L.~Lamport.
+\newblock The existence of refinement mappings.
+\newblock {\em Theoretical Computer Science}, 2(82):253--284, 1991.
+
+\bibitem{Abrial96a}
+J.-R. Abrial.
+\newblock {\em The {B}-{B}ook: {A}ssigning {P}rograms to {M}eanings}.
+\newblock CUP, 1996.
+
+\bibitem{Abrial98}
+J.-R. Abrial and L.~Mussat.
+\newblock Specification and design of a transmission protocol by successive
+  refinements using {B}.
+\newblock In M.~Broy and B.~Schieder (Eds), {\em Mathematical Methods in
+  Program Development}, volume 158 of {\em NATO ASI Series F: Computer and
+  Systems Sciences}, pp 129--200. Springer, 1997.
+
+\bibitem{Aceto92}
+L.~Aceto.
+\newblock {\em Action Refinement in Process Algebras}.
+\newblock CUP, London, 1992.
+
+\bibitem{ACGW:93}
+M.~Ainsworth, A.~H. Cruickshank, P.~J.~L. Wallis, and L.~J. Groves.
+\newblock Viewpoint specification and {Z}.
+\newblock {\em Information and Software Technology}, 36(1):43--51, February
+  1994.
+
+\bibitem{alencar91}
+A.~J. Alencar and J.~A. Goguen.
+\newblock {OOZE}: An object oriented {Z} environment.
+\newblock In P.~America (Ed), {\em ECOOP '91 - Object-Oriented Programming},
+  LNCS 512, pp 180--199. Springer-Verlag, 1991.
+
+\bibitem{America-oopsla90}
+P.~America.
+\newblock {A Parallel Object-Oriented Language with Inheritance and Subtyping}.
+\newblock In {\em Proceedings of the \mbox{OOPSLA/ECOOP}~'90 Conference on
+  Object-Oriented Programming Systems, Languages and Applications}, pp
+  161--168, October 1990.
+\newblock Published as ACM SIGPLAN Notices, volume 25, number 10.
+
+\bibitem{IFM99}
+K.~Araki, A.~Galloway, and K.~Taguchi (Eds).
+\newblock {\em International Conference on Integrated Formal Methods 1999
+  (IFM'99)}.
+\newblock Springer, York, July 1999.
+
+\bibitem{arthan91}
+R.~D. Arthan.
+\newblock On free type definitions in {Z}.
+\newblock In J.~E. Nicholls (Ed), {\em Sixth Annual Z User Workshop}, pp
+  40--58, York, December 1991. Springer-Verlag.
+
+\bibitem{Back89b}
+R.~J.~R. Back.
+\newblock A method for refining atomicity in parallel algorithms.
+\newblock In {\em PARLE'89 Parallel Architectures and Languages Europe}, number
+  366 in Lecture Notes in Computer Science, pp 199--216, Eindhoven,
+  Netherlands, June 1989. Springer-Verlag.
+
+\bibitem{Back93a}
+R.~J.~R. Back.
+\newblock Atomicity refinement in a refinement calculus framework.
+\newblock Reports on computer science and mathematics 142, Abo Akademi, 1993.
+
+\bibitem{Back88a}
+R.~J.~R. Back and R.~Kurki-Suonio.
+\newblock Distributed cooperation with action systems.
+\newblock {\em ACM Transactions on Programming Languages and Systems},
+  10(4):513--554, October 1988.
+
+\bibitem{Back89a}
+R.~J.~R. Back and R.~Kurki-Suonio.
+\newblock Decentralization of process nets with centralized control.
+\newblock {\em Distributed Computing}, 3(2):73--87, 1989.
+
+\bibitem{Back94a}
+R.~J.~R. Back and J.~von Wright.
+\newblock Trace refinement of action systems.
+\newblock In B.~Jonsson and J.~Parrow (Eds), {\em CONCUR'94: Concurrency
+  Theory}, number 836 in Lecture Notes in Computer Science, pp 367--384,
+  Uppsala, Sweden, August 1994. Springer-Verlag.
+
+\bibitem{Bar94a}
+R.~Barden, S.~Stepney, and D.~Cooper.
+\newblock {\em {Z} in Practice}.
+\newblock BCS Practitioner Series. Prentice Hall, 1994.
+
+\bibitem{Behnia99a}
+S.~Behnia and H.~Waeselynck.
+\newblock Test criteria definition for {B} models.
+\newblock In FM'99 \cite{FM99}, pp 509--529.
+
+\bibitem{Bertino96}
+E.~Bertino and G.~Guerrini.
+\newblock Viewpoints in object database systems.
+\newblock In Viewpoints'96 \cite{VPTS96proc}, pp 289--293.
+
+\bibitem{Bicarregui98a}
+J.~C. Bicarregui (Ed).
+\newblock {\em Proof in VDM: Case Studies}.
+\newblock FACIT. Springer, 1998.
+
+\bibitem{Boiten96b}
+E.~A. Boiten, H.~Bowman, J.~Derrick, and M.~W.~A. Steen.
+\newblock Issues in multiparadigm viewpoint specification.
+\newblock In Viewpoints'96 \cite{VPTS96proc}, pp 162--166.
+
+\bibitem{Boi98a}
+E.~A. Boiten and J.~Derrick.
+\newblock Grey box data refinement.
+\newblock In IRW/FMP'98 \cite{IRWFMP98}, pp 45--59.
+
+\bibitem{Boiten97f}
+E.~A. Boiten and J.~Derrick.
+\newblock {IO}-refinement in {Z}.
+\newblock In A.~Evans, D.~J. Duke, and T.~Clark (Eds), {\em 3rd BCS-FACS
+  Northern Formal Methods Workshop}. Springer-Verlag, September 1998.
+\newblock http://www.ewic.org.uk/.
+
+\bibitem{Boiten00}
+E.~A. Boiten and J.~Derrick.
+\newblock Liberating data refinement.
+\newblock In R.~C. Backhouse and J.~N. Oliveira (Eds), {\em Mathematics of
+  Program Construction}, volume 1837 of {\em Lecture Notes in Computer
+  Science}, pp 144--166. Springer-Verlag, 2000.
+
+\bibitem{Boiten97h}
+E.~A. Boiten, J.~Derrick, H.~Bowman, and M.~W.~A. Steen.
+\newblock Constructive consistency checking for partial specification in {Z}.
+\newblock {\em Science of Computer Programming}, 35(1):29--75, September 1999.
+
+\bibitem{lotos1}
+T.~Bolognesi and E.~Brinksma.
+\newblock Introduction to the {ISO} {S}pecification {L}anguage {LOTOS}.
+\newblock {\em Computer Networks and ISDN Systems}, 14(1):25--59, 1988.
+
+\bibitem{Bolton99}
+C.~Bolton, J.~Davies, and J.~C.~P. Woodcock.
+\newblock On the refinement and simulation of data types and processes.
+\newblock In IFM'99 \cite{IFM99}, pp 273--292.
+
+\bibitem{Sere98a}
+M.~Bonsangue, J.~Kok, and K.~Sere.
+\newblock An approach to object-orientation in action systems.
+\newblock In J.~Jeuring (Ed), {\em Mathematics of Program Construction
+  (MPC'98)}, volume 1422 of {\em Lecture Notes in Computer Science}, pp
+  68--95. Springer-Verlag, June 1998.
+
+\bibitem{Sere99a}
+M.~Bonsangue, J.~Kok, and K.~Sere.
+\newblock Developing object-based distributed systems.
+\newblock In FMOODS'99 \cite{FMOODS99}, pp 19--34.
+
+\bibitem{Borgida93}
+A.~Borgida, J.~Mylopoulos, and R.~Reiter.
+\newblock And nothing else changes: The frame problem in procedure
+  specifications.
+\newblock In {\em Proc. 15th International Conference on Software Engineering},
+  pp 303--314, Baltimore, Maryland, May 1993. IEEE Computer Society Press.
+
+\bibitem{Bottaci95}
+L.~Bottaci and J.~Jones.
+\newblock {\em Formal Specification using {Z}: {A} modelling approach}.
+\newblock International Thomson Publishing, 1995.
+
+\bibitem{Bowen96a}
+J.~P. Bowen.
+\newblock {\em Formal Specification and Documentation using {Z}: {A} Case Study
+  Approach}.
+\newblock International Thomson Computer Press, 1996.
+
+\bibitem{ZB2000}
+J.~P. Bowen, S.~Dunne, A.~Galloway, and S.~King (Eds).
+\newblock {\em ZB2000: Formal Specification and Development in Z and B}, volume
+  1878 of {\em Lecture Notes in Computer Science}.
+\newblock Springer-Verlag, September 2000.
+
+\bibitem{ZUM98}
+J.~P. Bowen, A.~Fett, and M.~G. Hinchey (Eds).
+\newblock {\em ZUM'98: The Z Formal Specification Notation}, volume 1493 of
+  {\em Lecture Notes in Computer Science}.
+\newblock Springer-Verlag, September 1998.
+
+\bibitem{ZUM94}
+J.~P. Bowen and J.~A. Hall (Eds).
+\newblock {\em ZUM'94, Z User Workshop}.
+\newblock Workshops in Computing. Springer-Verlag, Cambridge, United Kingdom,
+  June 1994.
+
+\bibitem{ZUM95}
+J.~P. Bowen and M.~G. Hinchey (Eds).
+\newblock {\em ZUM'95: The Z Formal Specification Notation}, volume 967 of {\em
+  Lecture Notes in Computer Science}.
+\newblock Springer-Verlag, Limerick, September 1995.
+
+\bibitem{ZUM97}
+J.~P. Bowen, M.~G. Hinchey, and D.~Till (Eds).
+\newblock {\em ZUM'97: The Z Formal Specification Notation}, volume 1212 of
+  {\em Lecture Notes in Computer Science}.
+\newblock Springer-Verlag, April 1997.
+
+\bibitem{ZUM92}
+J.~P. Bowen and J.~E. Nicholls (Eds).
+\newblock {\em Seventh Annual Z User Workshop}.
+\newblock Springer-Verlag, London, December 1992.
+
+\bibitem{Bowman96a}
+H.~Bowman, E.~A. Boiten, J.~Derrick, and M.~W.~A. Steen.
+\newblock Viewpoint consistency in {ODP}, a general interpretation.
+\newblock In E.~Najm and J.~B. Stefani (Eds), {\em First IFIP International
+  Workshop on Formal Methods for Open Object-based Distributed Systems}, pp
+  189--204, Paris, March 1996. Chapman \& Hall.
+
+\bibitem{Brauer91a}
+W.~Brauer, R.~Gold, and W.~Vogler.
+\newblock A survey of behaviour and equivalence preserving refinements of
+  {P}etri nets.
+\newblock In G.~Rozenberg (Ed), {\em Advances in Petri Nets}, LNCS 483,
+  pp 1--46. Springer-Verlag, 1991.
+
+\bibitem{brink1}
+E.~Brinksma.
+\newblock A theory for the derivation of tests.
+\newblock In S.~Aggarwal and K.~Sabnani (Eds), {\em Protocol Specification,
+  Testing and Verification, VIII}, pp 63--74, Atlantic City, USA, June 1988.
+  North-Holland.
+
+\bibitem{brink3}
+E.~Brinksma, G.~Scollo, and C.~Steenbergen.
+\newblock Process specification, their implementation and their tests.
+\newblock In B.~Sarikaya and G.~v.~Bochmann (Eds), {\em Protocol
+  Specification, Testing and Verification, VI}, pp 349--360, Montreal,
+  Canada, June 1986. North-Holland.
+
+\bibitem{Bruns92}
+G.~Bruns and S.~Anderson.
+\newblock The formalization of a communications protocol.
+\newblock Technical report, LFCS/Adelard SCCS, April 1992.
+
+\bibitem{Buchi99a}
+M.~B{\"u}chi and E.~Sekerinski.
+\newblock Refining concurrent objects.
+\newblock TUCS Technical Report 298, Abo Akademi, 1999.
+
+\bibitem{Butler97a}
+M.~Butler.
+\newblock An approach to the design of distributed systems with {B AMN}.
+\newblock In ZUM'97 \cite{ZUM97}, pp 223--241.
+
+\bibitem{Butler99b}
+M.~Butler.
+\newblock {csp2B}: A practical approach to combining {CSP} and {B}.
+\newblock In FM'99 \cite{FM99}, pp 490--508.
+
+\bibitem{Butler99a}
+M.~Butler.
+\newblock Distributed electronic mail system.
+\newblock In E.~Sekerinski and K.~Sere (Eds), {\em Program Development by
+  Refinement - {C}ase Studies Using the {B} Method}, FACIT. Springer, 1999.
+
+\bibitem{Butler98a}
+S.~Butler.
+\newblock {\em Behaviour in Object-Based Systems: {A} Formal Approach}.
+\newblock PhD thesis, University of Queensland, 1998.
+
+\bibitem{Canver99a}
+E.~Canver and F.~W. von Henke.
+\newblock Formal development of object-based systems in a temporal logic
+  setting.
+\newblock In FMOODS'99 \cite{FMOODS99}, pp 419--436.
+
+\bibitem{carrington94}
+D.~Carrington and P.~Stocks.
+\newblock A tale of two paradigms: {F}ormal methods and software testing.
+\newblock In ZUM'98 \cite{ZUM98}, pp 51--68.
+
+\bibitem{FMOODS99}
+P.~Ciancarini, A.~Fantechi, and R.~Gorrieri (Eds).
+\newblock {\em Formal Methods for Open Object-based Distributed Systems}.
+\newblock Kluwer, February 1999.
+
+\bibitem{Clement94a}
+T.~Clement.
+\newblock Comparing approaches to data reification.
+\newblock In FME'94 \cite{FME94}, pp 118--133.
+
+\bibitem{Codd79}
+E.~F. Codd.
+\newblock Extending the database relational model to capture more meaning.
+\newblock {\em ACM Transactions on Database Systems}, 4(4), December 1979.
+
+\bibitem{Cohen98a}
+E.~Cohen and L.~Lamport.
+\newblock Reduction in {TLA}.
+\newblock In {\em CONCUR'98}, volume 1466 of {\em Lecture Notes in Computer
+  Science}, pp 317--331. Springer-Verlag, 1998.
+
+\bibitem{Cusack91a}
+E.~Cusack.
+\newblock Inheritance in object oriented {Z}.
+\newblock In P.~America (Ed), {\em ECOOP '91 - Object-Oriented Programming},
+  LNCS 512, pp 167--179. Springer-Verlag, 1991.
+
+\bibitem{cusack92}
+E.~Cusack and G.~H.~B. Rafsanjani.
+\newblock {ZEST}.
+\newblock In S.~Stepney, R.~Barden, and D.~Cooper (Eds), {\em Object
+  Orientation in {Z}}, Workshops in Computing, pp 113--126. Springer-Verlag,
+  1992.
+
+\bibitem{Cusack92a}
+E.~Cusack and C.~Wezeman.
+\newblock Deriving tests for objects specified in {Z}.
+\newblock In ZUM'92 \cite{ZUM92}, pp 180--195.
+
+\bibitem{REX89}
+J.~W. {de Bakker}, W.-P. {de Roever}, and G.~Rozenberg (Eds).
+\newblock {\em {REX} Workshop on Stepwise Refinement of Distributed Systems,
+  Nijmegen, 1989}, volume 430 of {\em Lecture Notes in Computer Science}.
+  Springer-Verlag, 1990.
+
+\bibitem{deBakker94a}
+J.~W. de~Bakker and E.~P. de~Vink.
+\newblock Bisimulation semantics for concurrency with atomicity and action
+  refinement.
+\newblock {\em Fundamenta Informaticae}, 20:3--34, 1994.
+
+\bibitem{DeGroot98}
+M.~{de Groot} and K.~Robinson.
+\newblock Correctness in refinement developments.
+\newblock In IRW/FMP'98 \cite{IRWFMP98}, pp 117--132.
+
+\bibitem{deNicola84}
+R.~de~Nicola and M.~Hennessy.
+\newblock Testing equivalences for processes.
+\newblock {\em Theoretical Computer Science}, 34(3):83--133, 1984.
+
+\bibitem{DeRoever98}
+W.-P.~{de Roever} and K.~Engelhardt.
+\newblock {\em Data Refinement: Model-Oriented Proof Methods and their
+Comparison}.
+\newblock CUP, 1998.
+
+\bibitem{Derrick00a}
+J.~Derrick.
+\newblock A single complete refinement rule for {Z}.
+\newblock {\em Logic and Computation}, 10(5):663--675, 2000.
+
+\bibitem{Derrick98b}
+J.~Derrick and E.~A. Boiten.
+\newblock Testing refinements by refining tests.
+\newblock In ZUM'98 \cite{ZUM98}, pp 265--283.
+
+\bibitem{Derrick99c}
+J.~Derrick and E.~A. Boiten.
+\newblock Calculating upward and downward simulations of state-based
+  specifications.
+\newblock {\em Information and Software Technology}, 41:917--923, July 1999.
+
+\bibitem{Derrick99a}
+J.~Derrick and E.~A. Boiten.
+\newblock Non-atomic refinement in {Z}.
+\newblock In FM'99 \cite{FM99}, pp 1477--1496.
+
+\bibitem{Derrick99x}
+J.~Derrick and E.~A. Boiten.
+\newblock Testing refinements of state-based formal specifications.
+\newblock {\em Software Testing, Verification \& Reliability}, 9:27--50, 1999.
+
+\bibitem{Derrick00b}
+J.~Derrick and E.~A. Boiten.
+\newblock Refinement of state-based systems with internal operations.
+\newblock Technical report, Computing Laboratory, University of Kent,
+  Canterbury, 2000.
+
+\bibitem{Derrick96a}
+J.~Derrick, E.~A. Boiten, H.~Bowman, and M.~W.~A. Steen.
+\newblock Supporting {ODP} - translating {LOTOS} to {Z}.
+\newblock In E.~Najm and J.-B. Stefani (Eds), {\em First IFIP International
+  Workshop on Formal Methods for Open Object-based Distributed Systems}, pp
+  399--406, Paris, March 1996. Chapman \& Hall.
+
+\bibitem{Derrick97a}
+J.~Derrick, E.~A. Boiten, H.~Bowman, and M.~W.~A. Steen.
+\newblock Weak refinement in {Z}.
+\newblock In ZUM'97 \cite{ZUM97}, pp 369--388.
+
+\bibitem{Derrick98a}
+J.~Derrick, E.~A. Boiten, H.~Bowman, and M.~W.~A. Steen.
+\newblock Specifying and {R}efining {I}nternal {O}perations in {Z}.
+\newblock {\em Formal Aspects of Computing}, 10:125--159, December 1998.
+
+\bibitem{Derrick00c}
+J.~Derrick and G.~Smith.
+\newblock Structural refinement in {O}bject-{Z}/{CSP}.
+\newblock In W.~Grieskamp, T.~Santen, and B.~Stoddart (Eds), {\em
+  International Conference on Integrated Formal Methods 2000 (IFM'00)}, volume
+  1945 of {\em Lecture Notes in Computer Science}, pp 194--213. Springer,
+  November 2000.
+
+\bibitem{Dick93}
+J.~Dick and A.~Faivre.
+\newblock Automating the generation and sequencing of test cases from
+  model-based specifications.
+\newblock In J.~C.~P.\ Woodcock and P.~G.\ Larsen (Eds), {\em FME'93:
+  Industrial-Strength Formal Methods}, pp 268--284. Formal Methods Europe,
+  Springer-Verlag, April 1993.
+\newblock Lecture Notes in Computer Science 670.
+
+\bibitem{Dijk76a}
+E.~W. Dijkstra.
+\newblock {\em A Discipline of Programming}.
+\newblock Prentice-Hall, Englewood Cliffs, N.J., 1976.
+
+\bibitem{Duke90}
+D.~J. Duke and R.~Duke.
+\newblock Towards a semantics for {Object-Z}.
+\newblock In D.~Bjorner, C.~A.~R. Hoare, and H.~Langmaack (Eds), {\em
+  VDM'90: VDM and Z! - Formal Methods in Software Development}, volume 428 of
+  {\em Lecture Notes in Computer Science}, pp 244--261, Kiel, FRG, April 1990.
+  Springer-Verlag.
+
+\bibitem{Duke95a}
+D.~J. Duke and M.~D. Harrison.
+\newblock Event model of human-system interaction.
+\newblock {\em Software Engineering Journal}, 10(1):3--12, January 1995.
+
+\bibitem{Duke95b}
+D.~J. Duke and M.~D. Harrison.
+\newblock Mapping user requirements to implementations.
+\newblock {\em Software Engineering Journal}, 10(1):13--20, January 1995.
+
+\bibitem{Duke96a}
+R.~Duke, C.~Bailes, and G.~Smith.
+\newblock A blocking model for reactive objects.
+\newblock {\em Formal Aspects of Computing}, 8(3):347--368, 1996.
+
+\bibitem{duke91}
+R.~Duke, P.~King, G.~A. Rose, and G.~Smith.
+\newblock The {O}bject-{Z} specification language version 1.
+\newblock Technical Report 91-1, Software Verification Research Centre,
+  Department of Computer Science, University of Queensland, May 1991.
+
+\bibitem{Duke00a}
+R.~Duke and G.~A. Rose.
+\newblock {\em Formal Object-Oriented Specification Using Object-{Z}}.
+\newblock Cornerstones of Computing. Macmillan, 2000.
+
+\bibitem{duke95}
+R.~Duke, G.~A. Rose, and G.~Smith.
+\newblock Object-{Z}: {A} specification language advocated for the description
+  of standards.
+\newblock {\em Computer Standards and Interfaces}, 17:511--533, September 1995.
+
+\bibitem{Elvang94a}
+M.~Elvang-Goransson and R.~E. Fields.
+\newblock An extended {VDM} refinement relation.
+\newblock In FME'94 \cite{FME94}, pp 175--189.
+
+\bibitem{Evans97a}
+A.~S. Evans.
+\newblock An improved recipe for specifying reactive systems in {Z}.
+\newblock In ZUM'97 \cite{ZUM97}, pp 275--294.
+
+\bibitem{Finkelstein:viewpoints}
+A.~Finkelstein, J.~Kramer, B.~Nuseibeh, L.~Finkelstein, and M.~Goedicke.
+\newblock Viewpoints: A framework for integrating multiple perspectives in
+  system development.
+\newblock {\em International Journal on Software Engineering and Knowledge
+  Engineering, Special Issue on Trends and Research Directions in Software
+  Engineering Environments}, 2(1):31--58, March 1992.
+
+\bibitem{VPTS96proc}
+A.~Finkelstein and G.~Spanoudakis (Eds).
+\newblock {\em SIGSOFT '96 International Workshop on Multiple Perspectives in
+  Software Development (Viewpoints '96)}.
+\newblock ACM, 1996.
+
+\bibitem{Fischer97a}
+C.~Fischer.
+\newblock {CSP-OZ} - {A} combination of {CSP} and {O}bject-{Z}.
+\newblock In H.~Bowman and J.~Derrick (Eds), {\em Second IFIP International
+  Conference on Formal Methods for Open Object-Based Distributed Systems},
+  pp 423--438. Chapman \& Hall, July 1997.
+
+\bibitem{Fischer98a}
+C.~Fischer.
+\newblock How to combine {Z} with a process algebra.
+\newblock In ZUM'98 \cite{ZUM98}, pp 5--23.
+
+\bibitem{Fischer00a}
+C.~Fischer.
+\newblock {\em Combination and Implementation of Processes and Data: From
+  {CSP-OZ} to {J}ava}.
+\newblock PhD thesis, University of Oldenburg, January 2000.
+
+\bibitem{Fischer97b}
+C.~Fischer and G.~Smith.
+\newblock Combining {CSP} and {O}bject-{Z}: {F}inite or infinite trace
+  semantics.
+\newblock In T.~Higashino and A.~Togashi (Eds), {\em FORTE/PSTV'97}, pp
+  503--518, Osaka, Japan, November 1997. Chapman \& Hall.
+
+\bibitem{Fischer99a}
+C.~Fischer and H.~Wehrheim.
+\newblock Model checking {CSP-OZ} specifications with {FDR}.
+\newblock In IFM'99 \cite{IFM99}, pp 315--334.
+
+\bibitem{Wehrheim00a}
+C.~Fischer and H.~Wehrheim.
+\newblock Behavioural subtyping relations for object-oriented formalisms.
+\newblock In T.~Rus (Ed), {\em Algebraic Methodology and Software
+  Technology}, volume 1816 of {\em Lecture Notes in Computer Science}, pp
+  469--483. Springer-Verlag, 2000.
+
+\bibitem{FME97}
+J.~Fitzgerald, C.~B. Jones, and P.~Lucas (Eds).
+\newblock {\em FME'97: Industrial Application and Strengthened Foundations of
+  Formal Methods}, volume 1313 of {\em Lecture Notes in Computer Science}.
+\newblock Springer-Verlag, September 1997.
+
+\bibitem{fdr95a}
+Formal Systems (Europe) Ltd.
+\newblock {\em Failures-{D}ivergences {R}efinement: {FDR 2}}, October 1997.
+\newblock FDR2 User Manual.
+
+\bibitem{Frappier97}
+M.~Frappier, A.~Mili, and J.~Desharnais.
+\newblock Defining and detecting feature interactions.
+\newblock In R.~S. Bird and L.~Meertens (Eds), {\em IFIP TC2 WG 2.1
+  International Workshop on Algorithmic Languages and Calculi}, pp 212--239.
+  Chapman \& Hall, 1997.
+
+\bibitem{Galloway97a}
+A.~Galloway and W.~Stoddart.
+\newblock An operational semantics for {ZCCS}.
+\newblock In ICFEM'97 \cite{ICFEM97}, pp 272--282.
+
+\bibitem{Gardiner93}
+P.~H.~B. Gardiner and C.~C. Morgan.
+\newblock A single complete rule for data refinement.
+\newblock {\em Formal Aspects of Computing}, 5:367--382, 1993.
+
+\bibitem{FME96}
+M.-C. Gaudel and J.~C.~P. Woodcock (Eds).
+\newblock {\em FME'96: Industrial Benefit of Formal Methods, Third
+  International Symposium of Formal Methods Europe}, volume 1051 of {\em
+  Lecture Notes in Computer Science}.
+\newblock Springer-Verlag, March 1996.
+
+\bibitem{Gerth90}
+R.~Gerth.
+\newblock Foundations of compositional program refinement.
+\newblock In REX'89 \cite{REX89}, pp 777--807.
+
+\bibitem{Goldsack96a}
+S.~J. Goldsack, K.~Lano, and E.~H. D{\"u}rr.
+\newblock Annealing and data decomposition in {VDM$^{++}$}.
+\newblock {\em ACM SIG{\-}PLAN Notices}, 31(4):32--38, April 1996.
+
+\bibitem{Gorrieri91a}
+R.~Gorrieri.
+\newblock {\em Refinement, Atomicity and Transactions for Process Description
+  Languages}.
+\newblock PhD thesis, University of Pisa, Pisa, 1991.
+
+\bibitem{Griffiths97a}
+A.~Griffiths.
+\newblock {\em A Formal Semantics to Support Modular Reasoning in {Object-Z}}.
+\newblock PhD thesis, University of Queensland, 1997.
+
+\bibitem{Griffiths97b}
+A.~Griffiths.
+\newblock Modular reasoning in {O}bject-{Z}.
+\newblock In {\em Asia-Pacific Software Engineering Conference and
+  International Computer Science Conference}. IEEE Computer Society Press,
+  1997.
+
+\bibitem{Grimm98a}
+K.~Grimm.
+\newblock Industrial requirements for the efficient development of reliable
+  embedded systems.
+\newblock In ZUM'98 \cite{ZUM98}, pp 1--4.
+
+\bibitem{Grochtmann93}
+M.~Grochtmann and K.~Grimm.
+\newblock Classification trees for partition testing.
+\newblock {\em Software Testing, Verification and Reliability}, 3:63--82, 1993.
+
+\bibitem{Groves98}
+L.~Groves.
+\newblock Adapting program derivations using program conjunction.
+\newblock In IRW/FMP'98 \cite{IRWFMP98}, pp 145--164.
+
+\bibitem{IRWFMP98}
+J.~Grundy, M.~Schwenke, and T.~Vickers (Eds).
+\newblock {\em International Refinement Workshop \& Formal Methods Pacific
+  '98}.
+\newblock Discrete Mathematics and Theoretical Computer Science.
+  Springer-Verlag, Canberra, September 1998.
+
+\bibitem{hall90}
+J.~A. Hall.
+\newblock Using {Z} as a specification calculus for object-oriented systems.
+\newblock In D.~Bjorner, C.~A.~R. Hoare, and H.~Langmaack (Eds), {\em VDM
+  '90 VDM and Z - Formal Methods in Software Development}, LNCS 428, pp
+  290--318, Kiel, FRG, April 1990. Springer-Verlag.
+
+\bibitem{hall94}
+J.~A. Hall.
+\newblock Specifying and interpreting class hierarchies in {Z}.
+\newblock In ZUM'94 \cite{ZUM94}, pp 120--138.
+
+\bibitem{Hayes87}
+I.~J. Hayes (Ed).
+\newblock {\em Specification Case Studies}.
+\newblock International Series in Computer Science. Prentice Hall, 1987.
+\newblock 2nd ed., 1993.
+
+\bibitem{Hayes92a}
+I.~J. Hayes.
+\newblock {VDM} and {Z}: {A} comparative case study.
+\newblock {\em Formal Aspects of Computing}, 4(1):76--99, 1992.
+
+\bibitem{Hayes95}
+I.~J. Hayes and J.~W. Sanders.
+\newblock Specification by interface separation.
+\newblock {\em Formal Aspects of Computing}, 7(4):430--439, 1995.
+
+\bibitem{He90}
+{He Jifeng} and C.~A.~R. Hoare.
+\newblock Prespecification and data refinement.
+\newblock In {\em Data Refinement in a Categorical Setting}, Technical
+  Monograph, number PRG-90. Oxford University Computing Laboratory, November
+  1990.
+
+\bibitem{Z:He86}
+{He Jifeng}, C.~A.~R. Hoare, and J.~W. Sanders.
+\newblock Data refinement refined.
+\newblock In B.~Robinet and R.~Wilhelm (Eds), {\em Proc.\ {ESOP}'86}, volume
+  213 of {\em Lecture Notes in Computer Science}, pp 187--196.
+  Springer-Verlag, 1986.
+
+\bibitem{Heerink}
+L.~Heerink and J.~Tretmans.
+\newblock Refusal testing for classes of transition systems with inputs and
+  outputs.
+\newblock In T.~Mizuno, N.~Shiratori, T.~Higashino, and A.~Togashi (Eds),
+  {\em FORTE/PSTV XVII'97}. Chapman and Hall, November 1997.
+
+\bibitem{Helke01}
+S.~Helke and T.~Santen.
+\newblock Mechanized analysis of behavioral conformance in the {E}iffel base
+  libraries.
+\newblock In {\em Formal Methods Europe}, 2001.
+\newblock To appear.
+
+\bibitem{Henson98a}
+M.~C. Henson.
+\newblock The standard logic of {Z} is inconsistent.
+\newblock {\em Formal Aspects of Computing}, 10(3):243--247, 1998.
+
+\bibitem{Henson99a}
+M.~C. Henson and S.~Reeves.
+\newblock Revising {Z}: {P}art {I} - Logic and semantics.
+\newblock {\em Formal Aspects of Computing}, 11(4):359--380, 1999.
+
+\bibitem{Henson99b}
+M.~C. Henson and S.~Reeves.
+\newblock Revising {Z}: {P}art {II} - Logical development.
+\newblock {\em Formal Aspects of Computing}, 11(4):381--401, 1999.
+
+\bibitem{Heirons98}
+R.~M. Hierons.
+\newblock Testing from a {Z} specification.
+\newblock {\em Software Testing, Verification and Reliability}, 7(1):19--33,
+  March 1997.
+
+\bibitem{Hinchey95a}
+M.~G. Hinchey and J.~P. Bowen.
+\newblock {\em Applications of Formal Methods}.
+\newblock International Series in Computer Science. Prentice Hall, 1995.
+
+\bibitem{ICFEM97}
+M.~G. Hinchey and Shaoying Liu (Eds).
+\newblock {\em First International Conference on Formal Engineering Methods
+  (ICFEM'97)}, Hiroshima, Japan, November 1997. IEEE Computer Society Press.
+
+\bibitem{Hoare72}
+C.~A.~R. Hoare.
+\newblock Proof of correctness of data representations.
+\newblock {\em Acta Informatica}, 1:271--281, 1972.
+
+\bibitem{Hoare85a}
+C.~A.~R. Hoare.
+\newblock {\em Communicating Sequential Processes}.
+\newblock Prentice Hall, 1985.
+
+\bibitem{Hoare87}
+C.~A.~R. Hoare, {He Jifeng}, and J.~W. Sanders.
+\newblock Prespecification in data refinement.
+\newblock {\em Information Processing Letters}, 25(2):71--76, May 1987.
+
+\bibitem{horcher95}
+H.-M. H{\"o}rcher.
+\newblock Improving software tests using {Z} specifications.
+\newblock In ZUM'95 \cite{ZUM95}, pp 152--166.
+
+\bibitem{ISO99a}
+ISO/IEC.
+\newblock Z notation: Final committee draft.
+\newblock International Standard CD 13568.2, International Standards
+  Organization, 1999.
+
+\bibitem{Jackson95}
+D.~Jackson.
+\newblock Structuring {Z} specifications with views.
+\newblock {\em ACM Transactions on Software Engineering and Methodology},
+  4(4):365--389, October 1995.
+
+\bibitem{Jacky97}
+J.~Jacky.
+\newblock {\em The Way of {Z}: {P}ractical Programming with Formal Methods}.
+\newblock Cambridge University Press, 1997.
+
+\bibitem{Jacky97a}
+J.~Jacky, J.~Unger, M.~Patrick, R.~Reid, and R.~Risler.
+\newblock Experience with {Z} developing a control program for a radiation
+  therapy machine.
+\newblock In ZUM'97 \cite{ZUM97}, pp 317--328.
+
+\bibitem{Jarvinen91a}
+H.~M. J{\"a}rvinen and R.~Kurki-Suonio.
+\newblock {DisCo} specification language: Marriage of actions and objects.
+\newblock In {\em 11th International Conference on Distributed Computing
+  Systems}, pp 142--151, Washington, D.C., USA, May 1991. IEEE Computer
+  Society Press.
+
+\bibitem{He89a}
+He~Jifeng.
+\newblock Process refinement.
+\newblock In J.~McDermid (Ed), {\em The Theory and Practice of Refinement}.
+  Butterworths, 1989.
+
+\bibitem{vdm80}
+C.~B. Jones.
+\newblock {\em Software Development: A Rigorous Approach}.
+\newblock Prentice Hall, 1980.
+
+\bibitem{vdm}
+C.~B. Jones.
+\newblock {\em Systematic Software Development using {VDM}}.
+\newblock Prentice Hall, 1989.
+
+\bibitem{Jones90a}
+C.~B. Jones and R.~C.~F. Shaw (Eds).
+\newblock {\em Case studies in Systematic Software Development}.
+\newblock Prentice Hall, 1990.
+
+\bibitem{Josephs88}
+M.~B. Josephs.
+\newblock The data refinement calculator for {Z} specifications.
+\newblock {\em Information Processing Letters}, 27:29--33, February 1988.
+
+\bibitem{Josephs88b}
+M.~B. Josephs.
+\newblock A state-based approach to communicating processes.
+\newblock {\em Distributed Computing}, 3:9--18, 1988.
+
+\bibitem{Josephs91}
+M.~B. Josephs.
+\newblock Specifying reactive systems in {Z}.
+\newblock Technical Report PRG-19, Programming Research Group, Oxford
+  University Computing Laboratory, 1991.
+
+\bibitem{King99a}
+S.~King.
+\newblock `{T}he standard logic for {Z}': {A} clarification.
+\newblock {\em Formal Aspects of Computing}, 11(4):472--473, 1999.
+
+\bibitem{King99b}
+S.~King, J.~Hammond, R.~Chapman, and A.~Prior.
+\newblock The value of verification: Positive experience of industrial proof.
+\newblock In FM'99 \cite{FM99}, pp 1527--1545.
+
+\bibitem{Klinker93}
+G.~J. Klinker.
+\newblock An environment for telecollaborative data exploration.
+\newblock In {\em Proceedings Visualization '93 -- sponsored by the IEEE
+  Computer Society}, pp 110--117, 1993.
+
+\bibitem{Lamport94a}
+L.~Lamport.
+\newblock The temporal logic of actions.
+\newblock {\em ACM Transactions on Programming Languages and Systems},
+  16(3):872--923, May 1994.
+
+\bibitem{Lamport89a}
+L.~Lamport and F.~B. Schneider.
+\newblock Pretending atomicity.
+\newblock Technical Report~44, Compaq Systems Research Center, May 1989.
+
+\bibitem{Lano96b}
+K.~Lano.
+\newblock {\em The {B} Language and Method}.
+\newblock FACIT. Springer, 1996.
+
+\bibitem{Lano97a}
+K.~Lano.
+\newblock Specifying reactive systems in {B AMN}.
+\newblock In ZUM'97 \cite{ZUM97}, pp 242--274.
+
+\bibitem{Lano99a}
+K.~Lano and K.~Androutsopoulos.
+\newblock Reactive system refinement of distributed systems in {B}.
+\newblock In IFM'99 \cite{IFM99}, pp 415--434.
+
+\bibitem{Lano96a}
+K.~Lano and S.~Goldsack.
+\newblock Refinement of distributed object systems.
+\newblock In E.~Najm and J.-B. Stefani (Eds), {\em First IFIP International
+  Workshop on Formal Methods for Open Object-Based Distributed Systems}, pp
+  99--114, Paris, March 1996. Chapman \& Hall.
+
+\bibitem{Lano94a}
+K.~Lano and H.~Haughton (Eds).
+\newblock {\em Object Oriented Specification Case Studies}.
+\newblock Prentice Hall, 1994.
+
+\bibitem{leduc:thesis}
+G.~Leduc.
+\newblock {\em On the Role of Implementation Relations in the Design of
+  Distributed Systems using {LOTOS}}.
+\newblock PhD thesis, University of Li\`{e}ge, Li\`{e}ge, Belgium, June 1991.
+
+\bibitem{Lipton75}
+R.~J. Lipton.
+\newblock Reduction: {A} method of proving properties of parallel programs.
+\newblock {\em Communications of the ACM}, 18(12):717--721, December 1975.
+
+\bibitem{Wing94}
+B.~Liskov and J.~M. Wing.
+\newblock A behavioural notion of subtyping.
+\newblock {\em ACM Transactions on Programming Languages and Systems},
+  16(6):1811--1841, 1994.
+
+\bibitem{Wing95}
+B.~Liskov and J.~M. Wing.
+\newblock Specifications and their use in defining subtypes.
+\newblock In ZUM'95 \cite{ZUM95}, pp 245--263.
+
+\bibitem{z:lupt91}
+P.~J. Lupton.
+\newblock Promoting forward simulation.
+\newblock In ZUM'90 \cite{ZUM90}, pp 27--49.
+
+\bibitem{Lynch90}
+N.~A. Lynch.
+\newblock Multivalued possibility mappings.
+\newblock In REX'89 \cite{REX89}, pp 519--543.
+
+\bibitem{Lynch92}
+N.~A. Lynch and F.~Vaandrager.
+\newblock Forward and backward simulations for timing-based systems.
+\newblock In J.~W. de~Bakker, W.-P. de~Roever, C.~Huizing, and G.~Rozenberg
+  (Eds), {\em Real-Time: Theory in Practice (REX Workshop, Mook, The
+  Netherlands, June 1991)}, LNCS 600, pp 397--446. Springer-Verlag, 1992.
+
+\bibitem{Mahony99a}
+B.~P. Mahony.
+\newblock The least conjunctive refinement and promotion in the refinement
+  calculus.
+\newblock {\em Formal Aspects of Computing}, 11(1):75--105, 1999.
+
+\bibitem{Mahony98a}
+B.~P. Mahony and J.~S. Dong.
+\newblock Blending {Object-Z} and timed {CSP}: An introduction to {TCOZ}.
+\newblock In K.~Futatsugi, R.~Kemmerer, and K.~Torii (Eds), {\em 20th
+  International Conference on Software Engineering (ICSE'98)}. IEEE Press,
+  1998.
+
+\bibitem{Mahony00a}
+B.~P. Mahony and J.~S. Dong.
+\newblock Timed communicating {O}bject-{Z}.
+\newblock {\em IEEE Transactions on Software Engineering}, 26(2):150--177,
+  February 2000.
+
+\bibitem{meira91}
+S.~L. Meira and A.~L.~C. Cavalcanti.
+\newblock Modular object oriented {Z} specifications.
+\newblock In ZUM'90 \cite{ZUM90}, pp 173--192.
+
+\bibitem{Merritt90}
+M.~Merritt.
+\newblock Completeness theorems for automata.
+\newblock In REX'89 \cite{REX89}, pp 544--560.
+
+\bibitem{Miarka00}
+R.~Miarka, E.~A. Boiten, and J.~Derrick.
+\newblock Guards, preconditions and refinement in {Z}.
+\newblock In ZB 2000 \cite{ZB2000}, pp 286--303.
+
+\bibitem{Mikhajlova97}
+A.~Mikhajlova and E.~Sekerinski.
+\newblock Class refinement and interface refinement in object-oriented
+  programs.
+\newblock In FME'97 \cite{FME97}, pp 82--101.
+
+\bibitem{Milner89}
+R.~Milner.
+\newblock {\em Communication and Concurrency}.
+\newblock Prentice-Hall, 1989.
+
+\bibitem{Z:Morg94b}
+C.~C. Morgan.
+\newblock {\em Programming from Specifications}.
+\newblock Prentice Hall International Series in Computer Science, 2nd edition,
+  1994.
+
+\bibitem{Murray98}
+L.~Murray, D.~Carrington, I.~MacColl, J.~McDonald, and P.~Strooper.
+\newblock Formal derivation of finite state machines for class testing.
+\newblock In ZUM'98 \cite{ZUM98}, pp 42--59.
+
+\bibitem{FME94}
+M.~Naftalin, T.~Denvir, and M.~Bertran (Eds).
+\newblock {\em FME'94: Industrial Benefit of Formal Methods, Second
+  International Symposium of Formal Methods Europe}, volume 873 of {\em Lecture
+  Notes in Computer Science}, Berlin, 1994. Springer-Verlag.
+
+\bibitem{ZUM90}
+J.~E. Nicholls (Ed).
+\newblock {\em {Z} User Workshop, {Oxford} 1990}, Workshops in Computing.
+  Springer-Verlag, 1990.
+
+\bibitem{Nipkow90}
+T.~Nipkow.
+\newblock Formal verification of data type refinement --- {T}heory and
+  practice.
+\newblock In REX'89 \cite{REX89}, pp 561--591.
+
+\bibitem{Potter91}
+B.~Potter, J.~Sinclair, and D.~Till.
+\newblock {\em An Introduction to Formal Specification and Z}.
+\newblock International Series in Computer Science. Prentice Hall, 1991.
+\newblock 2nd ed., 1996.
+
+\bibitem{Python}
+Monty Python.
+\newblock {\em The Meaning of Life}.
+\newblock 1983.
+
+\bibitem{Rafsan94}
+G.~H.~B. Rafsanjani.
+\newblock {ZEST} - {Z} {E}xtended with {S}tructuring: {A} users's guide.
+\newblock Technical report, BT, June 1994.
+
+\bibitem{Ratcliff94}
+B.~Ratcliff.
+\newblock {\em Introducing Specification using {Z}: {A} Practical Case Study
+  Approach}.
+\newblock McGraw-Hill, 1994.
+
+\bibitem{Roberts98}
+J.~C. Roberts.
+\newblock On encouraging multiple views for visualization.
+\newblock In {\em Information Visualization IV'98}, London, July 1998. {IEEE
+  Computer Society}.
+
+\bibitem{Roscoe96}
+A.~W. Roscoe, J.~C.~P. Woodcock, and L.~Wulf.
+\newblock Non-interference through determinism.
+\newblock {\em Journal of Computer Security}, 4(1):27--54, 1996.
+
+\bibitem{Roscoe98a}
+A.W. Roscoe.
+\newblock {\em The Theory and Practice of Concurrency}.
+\newblock International Series in Computer Science. Prentice Hall, 1998.
+
+\bibitem{Schneider00a}
+S.~Schneider.
+\newblock {\em Concurrent and {R}eal-{T}ime {S}ystems: {T}he {CSP} {A}pproach}.
+\newblock Wiley, 2000.
+
+\bibitem{Scullard88}
+G.~T. Scullard.
+\newblock Test case selection using {VDM}.
+\newblock In {\em VDM '88 VDM -- The Way Ahead}, pp 178--186, September
+  1988.
+
+\bibitem{Sere99b}
+E.~Sekerinski and K.~Sere (Eds).
+\newblock {\em Program Development by Refinement - {C}ase Studies Using the {B}
+  Method}.
+\newblock FACIT. Springer, 1999.
+
+\bibitem{Sere97a}
+K.~Sere and M.~Walden.
+\newblock Data refinement of remote procedures.
+\newblock In {\em International Symposium on Theoretical Aspects of Computer
+  Software (TACS'97)}, number 1281 in Lecture Notes in Computer Science, pp
+  267--294. Springer-Verlag, 1997.
+
+\bibitem{Singh97}
+H.~Singh, M.~Conrad, and S.~Sadeghipour.
+\newblock Test case design based on {Z} and the classification-tree method.
+\newblock In ICFEM'97 \cite{ICFEM97}, pp 81--90.
+
+\bibitem{Smith95b}
+G.~Smith.
+\newblock Extending {W} for {Object-Z}.
+\newblock In ZUM'95 \cite{ZUM95}, pp 276--295.
+
+\bibitem{Smith95a}
+G.~Smith.
+\newblock A fully abstract semantics of classes for {Object-Z}.
+\newblock {\em Formal Aspects of Computing}, 7(3):289--313, 1995.
+
+\bibitem{Smith97a}
+G.~Smith.
+\newblock A semantic integration of {Object-Z} and {CSP} for the specification
+  of concurrent systems.
+\newblock In FME'97 \cite{FME97}, pp 62--81.
+
+\bibitem{Smith00a}
+G.~Smith.
+\newblock {\em The {O}bject-{Z} {S}pecification {L}anguage}.
+\newblock Kluwer Academic Publishers, 2000.
+
+\bibitem{Smith97b}
+G.~Smith and J.~Derrick.
+\newblock Refinement and verification of concurrent systems specified in
+  {Object-Z} and {CSP}.
+\newblock In ICFEM'97 \cite{ICFEM97}, pp 293--302.
+
+\bibitem{Smith00b}
+G.~Smith and J.~Derrick.
+\newblock Specification, refinement and verification of concurrent systems -
+  {An} integration of {Object-Z} and {CSP}.
+\newblock {\em Formal Methods in System Design}, 2001.
+\newblock To appear.
+
+\bibitem{Smith99a}
+G.~Smith and I.~J. Hayes.
+\newblock Towards real-time {O}bject-{Z}.
+\newblock In IFM'99 \cite{IFM99}, pp 49--65.
+
+\bibitem{Lynch93}
+J.~F. Sogaard-Andersen, N.~A. Lynch, and B.~W. Lampson.
+\newblock Correctness of communication protocols - {A} case study.
+\newblock Technical report, Laboratory for Computer Science, MIT, November
+  1993.
+
+\bibitem{Spivey88}
+J.~M. Spivey.
+\newblock {\em Understanding Z: A Specification Language and its Formal
+  Semantics}.
+\newblock Cambridge University Press, 1988.
+
+\bibitem{Spivey89}
+J.~M. Spivey.
+\newblock {\em The Z Notation: A Reference Manual}.
+\newblock International Series in Computer Science. Prentice Hall, 1989.
+
+\bibitem{Spivey92}
+J.~M. Spivey.
+\newblock {\em The Z Notation: A Reference Manual}.
+\newblock International Series in Computer Science. Prentice Hall, 2nd edition,
+  1992.
+
+\bibitem{stepney95}
+S.~Stepney.
+\newblock Testing as {A}bstraction.
+\newblock In ZUM'95 \cite{ZUM95}, pp 137--151.
+
+\bibitem{stepney}
+S.~Stepney, R.~Barden, and D.~Cooper (Eds).
+\newblock {\em Object Orientation in {Z}}.
+\newblock Workshops in Computing. Springer-Verlag, 1992.
+
+\bibitem{Stepney92a}
+S.~Stepney, R.~Barden, and D.~Cooper.
+\newblock A survey of object orientation in {Z}.
+\newblock {\em Software Engineering Journal}, 7(2):150--160, 1992.
+
+\bibitem{Stepney00a}
+S.~Stepney and D.~Cooper.
+\newblock Formal methods for industrial products.
+\newblock In ZB 2000 \cite{ZB2000}, pp 374--393.
+
+\bibitem{Stepney98}
+S.~Stepney, D.~Cooper, and J.~C.~P. Woodcock.
+\newblock More powerful data refinement in {Z}.
+\newblock In ZUM'98 \cite{ZUM98}, pp 284--307.
+
+\bibitem{Stocks93}
+P.~Stocks.
+\newblock {\em Applying Formal Methods to Software Testing}.
+\newblock PhD thesis, Department of Computer Science, University of Queensland,
+  St.\ Lucia 4072, Australia, 1993.
+
+\bibitem{Stringer97a}
+D.~W.~J. Stringer-Calvert, S.~Stepney, and I.~Wand.
+\newblock Using {PVS} to prove a {Z} refinement: {A} case study.
+\newblock In FME'97 \cite{FME97}, pp 573--588.
+
+\bibitem{Strulo95x}
+B.~Strulo, 1995.
+\newblock Email communication.
+
+\bibitem{Strulo95}
+B.~Strulo.
+\newblock How firing conditions help inheritance.
+\newblock In ZUM'95 \cite{ZUM95}, pp 264--275.
+
+\bibitem{Sufrin90}
+B.~Sufrin and J.~He.
+\newblock Specification, refinement, and analysis of interactive processes.
+\newblock In M.~D. Harrison and H.~W. Thimbleby (Eds), {\em Formal Methods
+  in Human Computer Interaction}, pp 153--200. Cambridge University Press,
+  1990.
+
+\bibitem{Taguchi97a}
+K.~Taguchi and K.~Araki.
+\newblock The state-based {CCS} semantics for concurrent {Z} specification.
+\newblock In ICFEM'97 \cite{ICFEM97}, pp 283--292.
+
+\bibitem{Toyn98}
+I.~Toyn.
+\newblock Innovations in standard {Z} notation.
+\newblock In ZUM'98 \cite{ZUM98}, pp 193--213.
+
+\bibitem{Treharne99a}
+H.~Treharne and S.~Schneider.
+\newblock Using a process algebra to control {B} operations.
+\newblock In IFM'99 \cite{IFM99}, pp 437--456.
+
+\bibitem{Aertryck97}
+L.~van Aertryck, M.~Benveniste, and D.~Le Metayer.
+\newblock Casting: A formally based software test generation method.
+\newblock In ICFEM'97 \cite{ICFEM97}, pp 101--110.
+
+\bibitem{vanGlabbeek90a}
+R.~J. van Glabbeek.
+\newblock {\em Comparative Concurrency Semantics and Refinement of Actions}.
+\newblock PhD thesis, Vrije Universiteit, Amsterdam, 1990.
+
+\bibitem{Wehrheim00b}
+H.~Wehrheim.
+\newblock Behavioural subtyping and property preservation.
+\newblock In S.~F. Smith and C.~L. Talcott (Eds), {\em Formal Methods for
+  Open Object-Based Distributed Systems (FMOODS 2000)}, pp 213--231. Kluwer,
+  September 2000.
+
+\bibitem{wezeman}
+C.~Wezeman and A.~J. Judge.
+\newblock {Z} for managed objects.
+\newblock In ZUM'94 \cite{ZUM94}, pp 108--119.
+
+\bibitem{FM99}
+J.~M. Wing, J.~C.~P. Woodcock, and J.~Davies (Eds).
+\newblock {\em FM'99 World Congress on Formal Methods in the Development of
+  Computing Systems}, volume 1708 of {\em Lecture Notes in Computer Science},
+  Berlin, 1999. Springer-Verlag.
+
+\bibitem{Woodcock89a}
+J.~C.~P. Woodcock.
+\newblock Mathematics as a management tool: Proof rules for promotion.
+\newblock In {\em CSR Sixth Annual Conference on Large Software Systems}.
+  Elsevier, 1989.
+
+\bibitem{Woodcock98}
+J.~C.~P. Woodcock.
+\newblock Industrial-strength refinement.
+\newblock In IRW/FMP'98 \cite{IRWFMP98}, pp 33--44.
+
+\bibitem{Woodcock96}
+J.~C.~P. Woodcock and J.~Davies.
+\newblock {\em Using {Z}: Specification, Refinement, and Proof}.
+\newblock Prentice Hall, 1996.
+
+\bibitem{Woodcock88a}
+J.~C.~P. Woodcock and B.~Dickinson.
+\newblock Using {VDM} with rely and guarantee-conditions: {E}xperiences of a
+  real project.
+\newblock In {\em VDM'88}, pp 434--458, 1988.
+
+\bibitem{Woodcock90a}
+J.~C.~P. Woodcock and C.~C. Morgan.
+\newblock Refinement of state-based concurrent systems.
+\newblock In D.~Bjorner, C.~A.~R. Hoare, and H.~Langmaack (Eds), {\em
+  VDM'90: VDM and Z!- Formal Methods in Software Development}, volume 428 of
+  {\em Lecture Notes in Computer Science}. Springer-Verlag, 1990.
+
+\bibitem{zadeh96}
+H.~B. Zadeh.
+\newblock Using {ZEST} for {S}pecifying {M}anaged {O}bjects.
+\newblock Technical report, British Telecom, January 1996.
+
+\bibitem{zave}
+P.~Zave and M.~Jackson.
+\newblock Conjunction as composition.
+\newblock {\em {ACM} Transactions on Software Engineering and Methodology},
+  2(4):379--411, October 1993.
+
+\bibitem{Zave96}
+P.~Zave and M.~Jackson.
+\newblock Where do operations come from? {A} multiparadigm specification
+  technique.
+\newblock {\em IEEE Transactions on Software Engineering}, 22(7):508--528, July
+  1996.
+
+\end{thebibliography}

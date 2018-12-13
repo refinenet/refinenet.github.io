@@ -1,0 +1,40 @@
+H1 { color: rgb(0,0,40);
+     background-color: rgb(204,208,224); 
+     font-family: sans-serif;
+     border-top: solid thin;
+     border-bottom: solid thin;
+     border-left: solid thin;
+     border-right: solid thin;
+     text-align: center;
+   }
+H2 { color: rgb(0,0,40);
+     background-color: rgb(200,224,240); 
+     font-family: sans-serif;
+     border-top: solid thin;
+   }
+H3 { color: rgb(0,0,40);
+     background-color: rgb(200,224,240); 
+     font-family: sans-serif;
+   }
+BODY { background-color: rgb(200,224,240); 
+       color: rgb(0,0,0); 
+	  margin-left: 5%;
+	  margin-right: 5%;
+     }
+DIV.nav { line-height: 200%; 
+	  padding-left: 10%; 
+	  font-variant: small-caps; 
+	  color: rgb(0,0,0); 
+	  border-width: 1 pixel; 
+	  background-color: rgb(192,200,220);
+	  border-top: solid thin;
+	  border-bottom: solid thin;
+	  border-left: solid thin;
+	  border-right: solid thin;
+	}
+ADDRESS { line-height: 150%; 
+	  text-align: center; 
+	  color: rgb(0,0,0);
+	  font-family: serif;
+	  font-style: normal;
+}

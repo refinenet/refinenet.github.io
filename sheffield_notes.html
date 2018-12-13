@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<link href="refine.css" rel="stylesheet" type="text/css" />
+<title>
+Notes from RefineNet Sheffield January 2005 Meeting
+</title>
+<style>
+DT { font-weight: bolder; line-height:200%; margin-top: 12px; }
+DD { line-height:120%; margin-top: 12px; }
+</style>
+</head>
+
+<body>
+<h1>Notes from Sheffield January 2005 Meeting</h1>
+
+<div class="nav">
+ Home ~
+ <a href="meetings.html">Meetings</a> ~
+ <a href="partners.html">Partners</a> ~
+ <a href="tech.html">Technical</a>
+</div>
+
+<h2>Photos</h2>
+
+<p>Photos taken during the workshop by Dr. Mike Stannett of The University
+of Sheffield</p>
+
+<p style="text-align: center;">
+<a href="jan05_shef_moshe.jpg">
+<img src="jan05_shef_moshe_tmb.png" width="120" height="90" alt="[Photo]">
+</a>
+ ~ 
+<a href="jan05_shef_notetaking.jpg">
+<img src="jan05_shef_notetaking_tmb.png" width="120" height="90" alt="[Photo]">
+</a>
+ ~ 
+<a href="jan05_shef_schneider.jpg">
+<img src="jan05_shef_schneider_tmb.png" width="120" height="90" alt="[Photo]">
+</a>
+ ~
+<a href="jan05_shef_table.jpg">
+<img src="jan05_shef_table_tmb.png" width="120" height="90" alt="[Photo]">
+</a>
+</p>
+
+<h2>Monday 10th January</h2>
+
+<p>Present:
+John Derrick (Sheffield)
+<br/> Chris Thomson (Sheffield, PhD)
+<br/> Moshe Deutsch (Essex, PhD) 
+<br/> Adrian Hilton (Praxis)
+<br/> Wilson Ifill (AWE)
+<br/> Ana Cavalcanti (York)
+<br/> Jim Woodcook (York)
+<br/> Martin Henson (Essex)
+<br/> Steve Schneider (Surrey)
+<br/> Helen Treharne (Surrey)
+<br/> Steve King (York)
+<br/> Neil Evans (Royal Holloway)
+<br/> Tony Simons (Sheffield) 
+<br/> Tony Cowling (Sheffield)
+</p>
+
+<dl>
+
+<dt>15:00: Welcome, introductions</dt>
+
+<dt>15:05 <a href="henson_jan05.pdf">nuZ - a wide-spectrum logic</a></dt>
+<dd>Martin Henson, Essex
+<br/>Came out of Martin's research in program development in
+constructive set theory.  Subject is a very small spec language
+which is wide-spectrum (allowing you to move up to programming
+language) based on a simple relational language.
+<br/>nuZ is a modification of Z; key differences are that it is
+based on total-correctness semantics (rather than partial); schema
+operators are monotonic; based on refinement rather than equality;
+and it is a logic rather than a language.
+<br/>Core language features: variables over schemas, atomic schemas,
+negation schemas, disjunction schemas, existential hiding and recursion
+schemas. Takes semantics from Reeves and Henson's Z logics.
+<br/>In nuZ, refinement is the <em>lifted-totalised completion</em> of
+the original spec - partial is made total, and non-det choice is made
+arbitrary.
+<br/>A <em>wide-spectrum logic</em> has everything characterised by
+introdution and elimination rules.  Note that negation is not the
+relational inverse, because the universe of total-correctness relations
+aren't closed under negation.  The negation rules are a combination of
+relational inverse, disjunction and lifting.  But you can still prove
+double-negation and the extended middle (chaos = U or not U)
+<br/>Given that, operator definitions are just schema expressions
+involving free variables over schemas.  Since we provide semantics for
+new constructs, we need to show that the semantics we provide makes
+some form of sense.  So show some properties so that we know we made
+the "right choice" of semantics.
+<br/>You can see definitions of standard examples such as abort, chaos 
+and U strengthened by P in Martin's notes. 
+<br/>Composition of schemas can be done with a combination of
+rejigging alphabets and existential hiding.  The left and right
+subcomponents are extended by the mismatch between the types of
+the two schemas.
+<br/>You can also specify a programming language (assignment,
+alternation, procedures, recursion).  A procedure call, for instance,
+is interpreted in terms of a schema specialisation.
+<br/>We can derive a range of refinement rules e.g. strengthen post,
+weaken pre, composition and conjunction.  We are swapping a conditional
+logic for a (relational) logic of refinement.  Part of the reason that
+Z refinement isn't monotonic is that the Z operators don't play well
+with the lifted totalisation.
+<br/>The recursive schemas are unusual and repay study.  Since the
+calculus is monotonic (but not omega-continous).  The recursive
+fixed point can be characterised by a maximisation over a massive
+number of possible chaos-based schemas. 
+<br/>For primitive recursion over e.g. the natural numbers you need
+6 schema operators: one induction rule, two elimination rules.
+There are straightforward rules for the natural numbers.  The most
+useful principle is the <em>rule of recursive synthesis</em>, refining
+a schema to a recursive procedure. 
+<br/>Not restricted to working on numbers; we could operate on
+lists, trees etc. 
+<br/>Big issue: what does a spec say about behaviour outside
+the precondition and outside the frame?  Number of solutions
+possible: skip outside frame (refinement calc), chaos outside
+frame (Henson-Reeves), silent outside frame (nuZ).
+<br/>nuZ designed for reasoning about specs and programs, and for 
+deriving programs from specifications.  Completely formal,
+adaptable for integrating a programming language of your choice.
+Very small and easy to understand.
+</dd>
+<dd>Questions / comments / observations:
+<br/>Expectations in Z are that equality holds.  Expectations
+in nuZ is that <em>refinement</em> holds, so the operators do
+not work the same way as in Z.  The box office example in Jim
+Woodcock's book, for instance, won't work as it stands in nuZ.
+<br/>Superficial resemblance with uTP - have you looked at it
+in more detail?  It's arguable, and indeed in certain areas there
+are deep connections - uTP design refinement equivalent to S-refinement
+in nuZ.  
+<br/>Can't refine over-specified schemas to code in nuZ whereas
+you can in Z -- the partial is totalised and then can do anything
+at all (x := 5 and 6 can give you x = 7).
+<br/>Can you go from recursive spec to iterative implementation?
+Yes - take a special case of primitive recursion which is tail-recursive
+and tweak that. 
+<br/>All based on HOL - is it easily mechanised?  Well, it should
+be... but hasn't been yet.  Martin wouldn't mechanise the host language,
+but rather everything from membership conditions in schemas upwards.
+<dd/>
+
+<dt>16:30 Preserving Temporal Logic Properties under Refinement</dt>
+
+<dd>John Derrick
+<br/>General problem; if spec A refines to C and A |= P, does
+C |= P?  Temporal properties capture behavioural information
+not directly in the model.  Interested in the context of Z and
+other state-based spec languages.  Interested in properties 
+expressed in the standard temporal logics e.g. LTL.
+<br/>Temporal logics extent prop logic with operators to talk
+about the evolution of a system over time: "always true []",
+"eventually true &lt;&gt;", "true until X happens", "true in next state ()".
+An LTL property holds for a spec if it holds for all possible paths.
+<br/>We have refinement as you'd expect, so suppose you implement
+an example spec (choice from a set) and concrete implementation (queue) with
+a suitable retrieve relation - this is a valid implementation
+representing a reduction of non-determinism.  E.g. A /= emptyset =&gt;
+&lt;&gt; ALeave becomes C /= empty sequence =&gt; &lt;&gt; CLeave.
+This is the image of the original temporal spec under the retrieve relation.
+<br/>Second example with concrete implementation t postponing non-det
+compared to the spec s;
+A |= [] (s=1 => () (s=3)) then becomes C |= [] (t=1 => () (t=3)) except
+that it doesn't; the spec is more precise at the specified point
+than the implementation is. 
+<br/>It all depends on how much is covered by |=; does it cover
+just external things, or does it cover internal things too?
+I/O, events, states, ... ?
+<br/>If we have properties over observable behaviours, they should
+be preserved otherwise our notion of refinement is no good.  But
+if properties over non-observable properties, specifically state,
+then there is still a valid refinement.  But the example we had above 
+was where the <em>structure</em> of the state was different, and
+the assertion related to the state structure (we assumed that a 1
+was followed by a 3 inevitably, whereas in concrete 1 could be
+3 or 4).  So do the temporal operators distribute through the
+property translation?  Actually, no.  
+<br/>The next-state operator ()
+can either go up to the concrete and then go along, or go along
+the abstract state then go up to the concrete.  That works fine
+due to the correctness of refinement.  What about the always
+operator []?  That's fine too.  The failure is due 
+to <em>negation</em>, not a temporal operator.  If negation 
+exists in the fragment of prop logic you're using then you
+will come unstuck, probably, because the negation causes you
+to lose information.  If you have an <em>even</em> number of
+successive negations to distribute then it will be OK.  
+[] works because it is defined by &lt;&gt; plus two negations.
+<br/>CTL (branching time temporal logic)
+doesn't let the original assertion work.  We don't have
+box, diamond operators but rather look at possible next
+states and paths between states.  The two logics are not
+comparable.  But the transformation between A and C works
+as for LTL.  
+<br/>  Distribution works for AX (all paths) but fails for
+EX (exists a path) because you could eliminate the required
+path during the refinement.
+<br/>The mu-calculus encodes LTL and CTL, and so you get the
+results you expect - failures can be traced back to the LTL
+and CTL constructs.
+</dd>
+<dd>Questions / comments:
+<br/>Any applications of this?  None known at the moment.
+Model-checking bods might have a firmer idea about this.
+<br/>Might be useful the other way round - instead of
+"what properties hold on refinement", find an abstraction
+that's small enough to model-check and see if it's a 
+suitable refinement.
+</dd>
+
+<dt>17:25 The Difference Between Refinement and Change</dt>
+<dd>Chris Thomson
+<br/>Initial PhD focus on developing software better.
+Dynamic relationship between software and all the other crap
+that exists in a software project (requirements, tests etc.)
+<br/>What is "refinement"?  CS term well defined locally, but what is
+wider definition?  Is it a process, what happens in practice or just
+a theoretical notion?
+<br/>Software change looks at software, not as evolution over long-term
+lifecycles but rather at the first go at the software.  Assume that we
+can tack stuff onto software once we have a first working version.
+<br/>Working at collecting data from student teams writing software
+so we see all the mistakes, archive of 40 separate development projects
+undertaken.  About 10Gb of data, mostly noise.
+<br/>Process data quantitative for general results (poor analysis
+despite large data size), qualitative (applicable to single project only
+but captures interesting information).
+<br/>Looked at e.g. how often does code change related to project time?
+Correlate with deliverable timetable for projects.  Software itself
+doesn't drive its own development.  Looked at log of "interesting
+things" happening in a project (e.g. late requirements, modules
+finishing). 
+<br/>Data shows no clear refinement process, system reacting to
+events all the time, lots of concurrent changes.  No clear 
+waterfall - only time changes go down is when client instructed
+to shut up about requirements for a time.  Most of students are
+marked on software process, and their usual choice is waterfall.
+Don't tend to backtrack, so if requirements change late on then
+nothing but the code gets updated.  
+<br/>Can we define these activities as refinement?  Out-of
+sequence activities, changing requirements.  Normally refinement
+viewed as the development; this we think is inaccurate.
+There is something called "change" which isn't refinement and
+which is non-linear, unexpected, unpredictable except late in
+development cycle.  Related to the changing environment that
+software will be deployed into.
+<br/>Change is most imported in RAD, developing up-to-date
+critical software, user unsure of needs [e.g. prototyping,
+spiral model of development] 
+<br/>Technical refinement more important in correct [critical]
+systems with well-defined requirements, stable business environments.
+<br/>The <a href="http://observatory.group.shef.ac.uk/">Software Observatory website</a> has some stats on this.
+</dd>
+<dd>Questions / comments?
+<br/>Retrenchment is clearly relevant to some aspects of this - handles
+effects of late-breaking requirements.
+<br/>General discussion on how to place limitations on retrenchment
+w.r.t. the customer getting the right ballpark idea on the system, 
+and the implementor not wanting the system to change more than they
+have to without a negotiated requirements change.
+<br/>Issue with bottom-up development masking overall refinement?
+Teams are split into waterfall and agile development, but the divide
+isn't firmly drawn.
+</dd>
+
+<dt>Evening</dt>
+<dd>Dinner at the Seven Spices in Sheffield, and a post-prandial
+pint at the Fat Cat.
+</dd>
+</dl>
+
+<h2>Tuesday 11th January</h2>
+
+<p>Present:
+As yesterday, plus:
+<br/> Steve Dunne (University of Teeside)
+<br/>Yifeng Chen (University of Durham) 
+<br/>
+</p>
+
+<dl>
+ <dt>9:30 From Data to Process Refinement</dt>
+ <dd>Steve Dunne, University of Teeside
+ <br/>Aim of talk: convince you that there are as many varieties
+of refinement between ADTs as there are refinements between processes
+(e.g. failures, divergences in CSP).
+ <br/>There's a top-to-bottom hierarchy of refinements with
+ReadyTraces at top, Failures in middle, Readiness and FailureTraces
+side-by-side between them, Traces at bottom and CompletedTraces, 
+SingletonFailures side-by-side between Failures and Traces.  
+Topmost is most discriminating.  FailureTraces aka "refusals testing",
+and an example is a mutant of TimedCSP where you can't observe how
+much time has passed.
+ <br/>ADT whose operations are devoid of I/O: <em>primitive</em>
+As it undergoes operations its state evolves from its initial
+state.  ADT whose operations can be blocked in some states of
+its evolution a <em>blocking</em> ADT.  A primitive blocking
+ADT can be interpreted as a concurrent process.  Its operations
+are its event alphabet and its traces are those sequences of
+consecutive operations which could feasibly be invoked after init
+without blocking.  Deliberately creating a very sparse universe here.
+<br/>A trace is any sequence of operations it can undertake consecutively
+from its initial state; complete trace once all operations are blocked.
+A refusal set at any state of an ADT is any subset of the set of ops 
+which are blocked in that state.  NB: discount unbounded non-determinism.
+ <br/>A failure is a suitable trace/refusal set pair, where the trace
+leads you to a state where that refusal set belongs.  Singleton failure
+when the refusal set is no more than one op.  A <em>failuretrace</em> is 
+a sequence
+of alternating operation sets X<sub>i</sub> and single 
+operations a<sub>i</sub>, so you can
+exhibit refusal set X<sub>1</sub> then do operation a<sub>1</sub>,
+then exhibit refusal set X<sub>2</sub> etc.
+ <br/>A <em>menu</em> of an ADT is the set of all operations which
+are enabled in that state (the complement of the maximal refusal set), 
+and a <em>ready pair</em> is a trace/menu pair so that the ADT can
+engage in that trace and arrive in a state that exhibits that menu.
+A <em>readytrace</em> is a sequence of alternating operation sets and
+operations in a similar structure to a failuretrace.
+ <br/>Up until 2002 the view was that classic simulation ordering on ADTs 
+as determined by forwards and backwards refinement corresponded to 
+failures refinement when the ADTs are interpreted as processess.  After
+Bolton and Davies at REFINE 2002 the previous accepted wisdom was wrong, 
+in fact the classical simulation ordering just corresponds to the coarser
+refinement notion of singleton-failures refinement between processes.
+(Also see Woodcock and Morgan's 1990 work, and Michael Butler's 
+PhD thesis which looks at the unbounded case we don't consider here.)
+ <br/>New claim by Dunne (2004/2005) that even current orthodoxy is
+misguided; the classical simulation ordering on ADTs just corresponds
+to plain and simple traces refinement of processes.  Noted Derrick
+and Bolton's comments about not being able to apply operation outside
+precondition.  John D. noted that Moshe's Refinement workshop submission
+addresses this issue in a lot more detail. 
+ <br/>Steve gave a visual example of a cartesian graph with 
+horizontal axis representing before state and vertical axis the
+after state; a partial non-det function is represented by a blob
+in the graph, and refinement is denoted by subsetting blobs. 
+Is MAGIC [true,false] represented by the empty graph?  That's contentious 
+among the audience... looks more like STOP to Jim.
+ <br/>John and Eerke added (according to Steve's interpretation) an
+extra point at the end of the horizontal and vertical axis representing 
+undefined state.  That gives you a (possibly broken) horizontal line
+at the top of the graph in addition to your central blob.  It looks
+like it's important not to fiddle with the precondition here.
+<br/>So you can view ADTs and blocking operations as processes,
+and you get the various forms of refinement as above.
+</dd>
+
+<dt>11:00 <a href="cavalcanti_jan05.pdf">Angelic Nondeterminism and UTP</a></dt>
+<dd>Ana Cavalcanti, York
+ <br/>Angelic non-determinism is the opposite of demonic: guarantees
+successs.  In UTP demonic choice is represented as the usual n operator.
+Angelic choice is the u operator, and the language construct is
+usually followed by ; (pre,post).  The angelic choice chooses according
+to what value(s) would satisfy the (pre,post).   It has semantics as
+the LUB in the lattice of monotonic predicate transforms.  In
+constraint programming languages it's implemented as backtracking.
+ <br/>In Morgan's refinement calculus it appears with respect to
+initial variable values.  There are calculational data refinement
+rules.  Back used angelic non-det to model system-user interaction.
+ <br/>In particular, Circus (combined Z and CSP) includes ZRC, the
+Z refinement calculus after Morgan.  There is an integrated model
+of state and reactive behaviour, and there are no logical constants.
+ <br/>UTP is Unifying Theories of Programming.  It has an alphabetised
+relational model, with relations defined as pairs (aP, P) where aP
+is the alphabet and P is the predicate over observational variables.
+ <br/>UTP relations include assignment, skip, sequential composition,
+and demonic non-determinism.  Set of relations is a complete lattice,
+where the ordering is reverse implication &lt;=.  There is abort,
+recursion (infinite recursion) and <em>infelicity</em>; where there
+is an infinite loop followed by assignment, it is viewed as equivalent
+to the assignment - non-termination isn't taken into account.  A more
+specialised theory of designs is helpful, adding two observational
+variables ok and ok' which let you observe program start and end.
+Redefine assignment and skip as designs, and all predicates expressible
+as programs are designs.
+ <br/>They propose four healthiness conditions relating to no
+predictions before program startup, non-termination not being
+<em>required</em> by the program, preconditions not using 
+variables with prime marks (e.g. x'), and basic feasibility.
+ <br/>Problem: no angelic non-determinism can be modelled in
+UTP because: the UTP predicates are isomorphic to set-based
+relations, and in turn isomorphic to predicate transformers, 
+but you can't do angelic non-det in predicate transformers so
+you can't do it in UTP. 
+ <br/>The set-based model for UTP has state info which assigns
+a value to each observational variable.  For an alphabet A the
+S<sub>A</sub> is a set of records with a component for each variable in A.
+In the set-based relation, the relation pair is (aR,R) where R is a
+relation between states and aR is the alphabet.  Clearly non-termination
+is handled.
+ <br/>This relation is isomorphic to the UTP relations.  Therefore UTP
+relations cannot handle non-determinism properly.  That leads us to
+a quasi-paradox: as noted earlier, non-term loop followed by assignment
+is equivalent to that assignment.  But not really a problem, because
+that non-term loop <em>isn't</em> non-term; rather, it terminates with
+an arbitrary value in this model.  No paradox.
+ <br/>There are corresponding healthiness conditions for set-based relations;
+three, rather than the original four.  Actually, H3 implies H2 in both UTP
+and the set-based model and you can prove in.  H4 (feasibility) doesn't 
+have a corresponding condition, we're not interested in it.  Designs which
+fail to satisfy H3 are a bit weird.  Are they relevant for modelling
+other systems?  Under examination.
+ <br/>Predicate transformers for UTP are also pairs (aPT,PT) where
+PT is a monotonic total function between subsets of the states and
+aPT is the alphabet.  There's an isomorphism between this and the
+state-based relations (hence angelic non-det is out).
+Universal conjunctivity implies termination of functions because
+the weakest precondition to establish true is true, so the wp
+to terminate is true.  In our world of designs, postcondition true
+is the set of all final states.  Conjunctivity is still an issue.
+ <br/>Looking for another relational model where we can capture
+both angelic and demonic: choose binary model relations devised
+by Ingrid Rewtizky.  Similar to Back's choice semantics.  Pair
+is (aBM,BM) where BM is a binary multirelation.  Relates initial
+states to sets of demonic choices.  Two step model: angel choses
+the valid subset, and demon chooses one from those.   abort is the
+empty set, Miracle relates any input subset satisfying a postcondition, 
+the universal relation.  Assignment x := e is the relation between initial
+state s to postconditions where the final state is s except x becomes e.
+But important healthiness condition: if (s,U1) is in the relation
+and U1 is subset of U2 then (s,U2) is in the relation.
+ <br/>Need to show that the BM's are isomorphic to the predicate
+transformers.  Monotonic predicate transformers correspond to healthy
+(by our conditions) binary multirelations.  Define the binary multirelations
+are predicates - define a theory in UTP to capture them.  Add to the
+usual alphabet a set representing the demonic choices available, a
+set of states on the variables and ok,ok' termination variables.
+This gives us maps back from binary multirelations to 
+set-based relations <em>directly</em>.  Example: PT abort corresponds
+to false.  PT miracle corresponds to true.  
+ <br/>Healthiness condition for this is that P is healthy if
+P executed, followed by super-setting the demonic choice items dc,
+is a valid alternative result of P.  If BM is healthy, then it
+corresponds to a healthy predicate.
+ <br/>Refinement in the binary multirelations here is simply implication.
+It is subset inclusion in the BM's (hence the result of implication).
+Angelic choice is disjunction, demonic choice is conjunction, and
+infelicity becomes a bit of a monster definition because you have
+to handle all the possible demonic choices.
+ <br/>Price for all this is a complex definition for sequential
+composition, and the definition for requirement changes.  In future,
+plan to redevelop the model of processes using this extended model.
+ <br/>Questions / comments:
+ <br/>Any paper?  Yes, submitted to the refinement workshop.
+ <br/>Negative consequences of changing refinement definition?
+ The previous definition was pretty pervasive in the theory, and
+so you have to go re-prove all the laws which is a bit tedious.
+</dd>
+
+ <dt>12:15 Plug and Play Safely: Rules for Behavioural Compatibility</dt>
+ <dd>Tony Simons, University of Sheffield
+ <br/>What is compatibility?  Usually software engineers only look
+at interfaces, but we're looking deeper, at state machine refinement.
+Need all plugged-in components to correspond to interface behaviour.
+Objects may have subtypes, and we want these to have the object's
+behaviour.    But how do we specify this?
+ <br/>"Object Machine" is the model, a kind of hierarchical state machine
+with initial state, control states and final states; <em>regions</em> are
+abbreviations for groups of states; and there's a standard syntax for
+stimulus and response.  State predicates completely partition the
+object's memory.  We can define abstract interfaces over the state
+machines, because states are characterised by abstract observer
+functions, not concrete values.
+ <br/>Example: refine a simple stack into one with dynamic resizing.
+ <br/>Basic rule in refinement that new states must always be
+introduced as substates of some existing states, and must completely
+partition that state.  Can also refine transitions, including self-transitions.
+A number of rules for refinement are already known; we added a new 
+rule, that there should be no other transitions added to or from states 
+outside the region.  Gave an example showing why this is necessary
+(loaning library books).
+ <br/>Conclusions: better rules than previously published ones
+and yet more flexible than others (e.g. Liskov and Wing, 1993).
+Less liberal than Cook/Daniels and McGregor/Dyer.
+ <br/>Questions / comments:
+ <br/>What's normative in these definitions and rules?
+Notion of refinement is restricted to mean behaviourally compatible;
+if it isn't compatible then there will be some interfaces where
+you plug in the semi-refined component where the overall machine
+will behave differently.
+ <br/>
+</dd>
+
+ <dt>13:30 Business meeting</dt>
+ <dd>
+Three items on the agenda: <br/>
+<ol>
+ <li>Refinement workshop April 12th at ZB</li>
+ <li>Next few meetings</li>
+ <li>Refinement workshop for 2006</li>
+</ol>
+</dd>
+
+<dd>The Refinement workshop:
+<br/>RefineNet will pay for travel and accomodation to the workshop
+for RefineNet members since it is a RefineNet activity, but nothing
+further if you're staying for ZB.
+<br/>Proceedings will be done by ENTCS, and FACS will run a special
+edition with extended selected papers.  How to select the papers
+for the proceedings?  Selection for FACS will be done later.  
+Select two as posters as there are 12 presentation slots and 14
+papers.  Also
+suggest that they submit to the ZB poster session.  Get Eerke to
+do the review as he's not involved in any of the papers, some time
+in the next week.  Then John will assemble a programme.
+<br/>For FACS selection, get a selection of the papers presented
+to submit extended versions for FACS.  Invite everyone to submit,
+then review, or hone down the list a bit before the invite?
+Get between 4 and 6 in the special issue.  Tell authors that it
+is competitive review, but that if they pass all the criteria
+(notably, the paper <em>must</em> be extended)
+then they'll be kept in the journal pipeline.  Pick a reasonably
+stiff date - end of May 2005.
+<br/>Possibly have a RefineNet business meeting in the early
+evening after the workshop?
+</dd>
+
+<dd>Meetings after the workshop:
+<br/>July 2005
+<br/>Nov/Dec 2005?
+<br/>Jan/Feb 2006?
+<br/>John D. to ask Richard B. about Manchester venue for July,
+and to avoid FME 2005 dates (18th-22nd).
+<br/>Theme: automation and mechanisation.  Jim's students
+working on Circus tools?  David Crocker (for Perfect Developer).
+Yves, Corina C., Christie B.  Also a section on the grant
+ideas and applications.
+</dd>
+
+<dd>Refinement workshop in 2006:
+<br/>Emil Sekerinski, who's hosting FME 2006 in McMaster, asked
+if we'd like to run a workshop there (August 2006).
+<br/>What's the financial impact?  We can fund registration
+and possibly additional accomodation, but not flights etc.
+Order of magnitude cost is &pound;600 per flight.  Only fund
+people who have a paper?  Would need cross-network agreement.
+Maybe a subsidy rather than full funding.
+Negotiate with Emil about the financial deal.
+Must not have any doubt about probity of paper selection.
+<br/>Other alternative to co-locate with subsequent ZB, but
+that might be in Australia or NZ...  Re-open discussion once
+we have more facts (remaining budget, ZB location).
+</dd>
+
+<dd>AOB:
+<br/>Jim suggested some joint publications across the
+RefineNet group - discuss at next meeting.
+<br/>Thanks to the organisers.
+</dd>
+
+</dl>
+
+<hr/>
+<address>
+Web pages maintained by 
+<a href="mailto:e.a.boiten@kent.ac.uk">RefineNet webmaster</a>
+</address>
+</body>
+</html>

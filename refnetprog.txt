@@ -1,0 +1,37 @@
+York RefineNet Workshop: Very draft programme  22/7/04 version
+=============================================
+
+Arrive 2:30pm on Tuesday 7 Sept for 1500 start.  The meeting is being 
+held at the Department of Computer Science, University of York.  Come to Reception
+and you'll be directed to room CS/103. 
+
+
+Tuesday 7 Sept:
+ 1430          Coffee / tea
+ 1500 		Welcome, introductions, plan of attack 
+ 1515 		State of RefineNet + related research (all participants)
+ 1530 		"Something on Mondex" (Susan Stepney) 
+ 1600  		"Some more on Mondex" (Jim Woodcock)
+ 1630          Coffee / tea
+ 1645  		"Specification, refinement and code synthesis for Java Card security component" (Jean-Louis Lanet)
+ 1745  		Wrap-up, summarise of information so far
+ 1800  		Close of the day
+        
+ 1930 		Dinner in York: La Piazza, Goodramgate
+
+
+Wednesday 8 Sept: 
+ 0900         Coffee / tea
+ 0930	 	Examples where refinement fails (see below)
+ 1015 		"Retrenchment tutorial" (Richard Banach and Mike Poppleton)
+ 1100         Coffee / tea
+ 1130	 	Retrenchment approach to (at least) Mondex examples (RB/MP)
+ 1200		Approx refinement approach to examples (John Derrick and Eerke Boiten)
+ 1300         Lunch
+ 1400		"Refinement and Security" (John Clark and Howard Chivers)
+ 1445 		Discussion
+ 1515         Coffee
+ 1530		Misc: RefineNet website, admin, Wrap-up
+ 1600 		Close of business       
+
+0930-1015 session. John Derrick to collate and post these in advance.

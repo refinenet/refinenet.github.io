@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.55)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bibliographical Notes</TITLE>
+<META NAME="description" CONTENT="Bibliographical Notes">
+<META NAME="keywords" CONTENT="root">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="root.css">
+
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node23.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html292"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html290"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html286"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html293"
+  HREF="node26.html">Weak Refinement</A>
+<B> Up:</B> <A NAME="tex2html291"
+  HREF="node23.html">IO Refinement</A>
+<B> Previous:</B> <A NAME="tex2html287"
+  HREF="node24.html">Errata</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001020000000000000000">
+Bibliographical Notes</A>
+</H1>
+Hayes and Sanders [<A
+ HREF="node45.html#Hayes95">109</A>] advocate the use of schema piping to
+abstract details of interfaces from the core of the specification. Their
+work is complementary to that described here, concentrating
+mostly on specification issues. Their
+``representation schemas" are very similar to our original IO
+transformers, but they do not consider changes to these as related to
+changes of inputs and outputs in operations.
+
+<P>
+Mikhajlova and Sekerinski [<A
+ HREF="node45.html#Mikhajlova97">159</A>] investigated class
+refinement and interface refinement for object-oriented languages. Their
+results have very reassuring similarities to ours. First, their
+``interface refinement" condition generalises ``class refinement" in
+much the same way as our IO refinement generalises data refinement.
+Also, they conclude that sensible input transformers should be
+surjective, and output transformers functional, which is exactly what we
+require given that their transformers operate in the opposite
+direction. Also, the need to administrate the transformers that have
+been applied so far appears in their notion of ``wrappers".
+
+<P>
+Work by Stepney, Cooper and Woodcock [<A
+ HREF="node45.html#Stepney98">193</A>,<A
+ HREF="node45.html#Woodcock98">208</A>]
+gives a generalisation of standard Z data refinement very similar to
+that presented here. The main differences are that global state is
+made explicit in initialisation and finalisation, and the assumption of
+a notion of global input and output which is separate from the global
+state itself. The necessary relations between local and global IO
+correspond to our original IO transformers. More details are expected to
+appear in a forthcoming book by these authors.
+
+<P>
+The ideas presented in this chapter were first published in
+[<A
+ HREF="node45.html#Boiten97f">21</A>].
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html292"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html290"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html286"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html293"
+  HREF="node26.html">Weak Refinement</A>
+<B> Up:</B> <A NAME="tex2html291"
+  HREF="node23.html">IO Refinement</A>
+<B> Previous:</B> <A NAME="tex2html287"
+  HREF="node24.html">Errata</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+E.A.Boiten
+2002-11-22
+</ADDRESS>
+</BODY>
+</HTML>

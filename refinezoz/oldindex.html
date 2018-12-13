@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<LINK REL=STYLESHEET HREF="/styles/house.css">
+<TITLE>Refinement of State Based Systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff" BACKGROUND="/images/UKCblue.gif">
+
+<!-- This table generates side coloured bar with logo -->
+<TABLE WIDTH="100%">
+  <TR>
+    <TD VALIGN="TOP">
+      <IMG SRC="/images/point.gif" WIDTH="80" HEIGHT="1" ALT=""><BR>
+      <IMG SRC="/images/research_sider.gif" ALT=""><BR>
+    </TD>
+    <TD VALIGN="TOP">
+
+<H1>Refinement of State Based Systems</H1>
+
+<H2>Book</H2>
+We are preparing a book entitled <b>Refinement
+in Z and Object-Z: Foundations and Advanced Applications</b>, planned to
+appear in the Springer FACIT series in Spring 2001.
+<p>
+An overview of many of the generalisations of refinement to be discussed
+in the book is given in "<a href="/pubs/2000/1023">Liberating Data Refinement</a>", presented at MPC 2000.
+<H2>Why and how?</h2>
+One could consider the Refinement research a spin-off of our
+research in the <a
+href="http://www.cs.ukc.ac.uk/research/tcs/consistency/">Cross
+Viewpoint Consistency in Open Distributed Processing</a> ("Consistency")
+project (Bowman, Derrick, Boiten, Steen, Linington). In
+this project we investigated how to define and check consistency for
+specifications consisting of multiple interrelated viewpoints. As our
+specification languages we used (Object-)Z and process algebra in the
+form of LOTOS. For various reasons, including traceability (see
+"<a href="http://www.cs.ukc.ac.uk/research/groups/tcs/consistency/tse.html">Managing
+Inconsistency and Promoting Consistency</a>") it appeared that
+<i>development</i> relations between specifications provide a better
+basis for consistency checking than the logical definition. 
+Consistency is defined as the existence of a specification which is a
+development of each of the viewpoint specifications.
+Of course, <i>refinement</i> is a prime example of such a development
+relation.
+<P>
+A selection of relevant general papers (more on the
+<a
+href="http://www.cs.ukc.ac.uk/research/groups/tcs/consistency/papers.html">Consistency project publications page</a> and below; follow on projects are
+<a href="/research/tcs/openviews/">OpenViews</a> and
+<a href="/research/tcs/framework/">A Constructive Framework for Partial
+Specification</a>):
+<UL>
+<LI>"<a href="/pubs/1996/183">Viewpoint Consistency in ODP</a>" gives an
+introduction to consistency based on development relations.
+<LI>"<a href="/pubs/1996/181">Issues in Multiparadigm Viewpoint
+Specification</a>" gives a fairly informal overview of the Consistency
+project.
+<LI>"<a href="/pubs/1997/182">Viewpoint consistency in Z and LOTOS: A
+case study</a>" is a more formal overview using a case study.
+<li><strong>(new)</strong>"<a href="/pubs/2000/1064">A Case Study in
+Partial Specification</a>" is a recent case study in Object-Z, listing
+requirements for advanced refinement relations.
+</UL>
+<H2>Refinement as Semantics</H2>
+A crucial observation is that if we take consistency to be the existence
+of a common development, implicitly we have taken as the semantics of a
+specification the collection of all its refinements. In other words: the
+refinement relation we use determines what a (partial) specification
+<i>means</i>.
+<p>
+A consequence of this is that if we want to change our interpretation of
+partial specifications, we have to change our refinement relation. A
+major part of our subsequent work has been concerned with exactly that.
+
+<H2>Constructive Refinement</H2>
+<p>
+One way of establishing constructively that two specifications
+<i>are</i> consistent is to exhibit a common development of them.
+Moreover, for consistency checking with further specifications, it is
+important that this common development is the ``most abstract" one. Such
+a most abstract (or <i>least</i> developed) common refinement we have called a
+<i>unification</i>. 
+<p>
+We have investigated unifications for specifications in Z and in LOTOS.
+<ul>
+<li>In "<a href="/pubs/1995/188">Viewpoints and Objects</a>" we
+presented an informal construction of unifications for Z. This can also
+be found in other early papers of the Consistency project -  this one
+also connects to the idea of <i>inheritance</i> as refinement.
+<li>"<a href="/pubs/1996/192/">Consistency and Refinement for Partial
+Specification in Z</a>" formalises the construction, fills in the
+details, and contains the proofs. An (even further) extended version has
+appeared in Science of Computer Programming as
+"<a href="/pubs/1999/607/">Constructive consistency checking for partial
+specification in Z</a>".
+<li>"<a href="/pubs/1997/228/">Coupling Schemas: Data Refinement and
+View(point) Composition</a>" explores the relation between unification,
+refinement, and "view composition", a simpler syntactic composition
+of specifications in Z.
+<li>"<a href="/pubs/1995/185/">Composition of LOTOS Specifications</a>"
+demonstrates how, on the other hand, in process algebras, with their
+various development relations, it is generally impossible to define
+unifications at the <i>syntactic</i> level.
+</ul>
+The papers on Z listed above demonstrate that it is possible to 
+describe syntactically
+<ul>
+<li>the least common refinement of two specifications, given a
+description of how they relate;
+<li>the least data refinement of a specification, given a relation
+between concrete and abstract state spaces.
+</ul>
+However, they are restricted to what is called <i>forwards</i> (or
+downwards) simulation refinement. The semantic characterisation of
+refinement implies that for completeness one needs <i>backwards</i>
+simulation refinement as well.
+<ul>
+<li>"<a href="/pubs/1999/746/">Calculating upward and downward
+simulations of state-based specifications</a>" gives constructions
+for both forwards
+and backwards simulation least data refinement.
+</ul>
+
+<H2>Constructive Refinement of Tests</H2>
+Techniques exist for generating test cases from state based specifications.
+In "<a href="/pubs/1998/609">Testing Refinements by Refining Tests</a>"
+(which won joint best paper at ZUM'98)
+we employ the techniques for
+calculating data refinements to generate tests for a refined
+specification by refining the test for the original specification.
+An extended version of this has been published as
+"<a href="/pubs/1999/747">Testing refinements of state-based formal
+specifications</a>".
+
+<H2>Relating Behaviour and State, and Weak Refinement</H2>
+Our interest in relating behavioural and state based formalisms also
+derives from the Consistency project: specifications may be written
+using combinations of behavioural and state based formalisms.
+There are essentially two ways of dealing with this.
+<ul>
+<li>"<a href="/pubs/1997/539/">Refinement and Verification of Concurrent
+Systems Specified in Object-Z and CSP</a>" (Graeme Smith &amp; John
+Derrick) shows how a behavioural notation can be used to provide an
+extra layer of structure on top of a state based specification.
+<li>"<a href="/pubs/1996/193/">Translating LOTOS into Z</a>" and 
+"<a href="/pubs/1997/348/">Translating LOTOS to Object-Z" (extended
+journal version)</a> support an
+approach where specifications in both can coexist, and need to be
+translated in order to check consistency.
+<li>In both of these approaches, one needs to ensure compatibility of
+semantics. In the viewpoints approach, this boils down to compatibility
+of development relations, which is explored in 
+"<a href="/pubs/1996/194/">Comparing LOTOS and Z Refinement
+Relations</a>".
+</ul>
+However, Z lacks one important feature of process algebras which is
+often needed for specification of concurrent systems: the
+<i>internal</i> operation.
+<ul>
+<li>"<a href="/pubs/1997/190/">Weak Refinement in Z</a>" provides an
+interpretation of internal operations in Z by defining a "weak"
+refinement relation for specifications that may contain internal
+operations. An extended version of this, "<a
+href="/pubs/1998/648/">Specifying and Refining internal operations in Z</a>",
+has appeared in Formal Aspects of Computing.
+</ul>
+
+<H2>Interface Refinement</H2>
+Standard refinement in Z does not allow changes in input and output
+parameters of operations. "<a href="/pubs/1998/608/">IO-Refinement in Z</a>"
+gives a long list of reasons (including object orientation
+and viewpoint specification)
+why it would be desirable to allow this. Then it shows how the required
+more liberal refinement relation can actually be derived from the semantic
+characterisation.
+
+<H2>Refinement and Decomposition</h2>
+"<a href="/pubs/1999/816">Separating component and context specification
+using promotion</a>" describes how refinement between 
+specifications can be preserved when these specifications are considered
+in larger contexts, created either by <i>promotion</i> or higher level
+structuring provided by a process algebra like CSP.
+<p>
+"<a href="http:/pubs/1999/912">Non-atomic refinement in Z</a>"
+describes a first
+investigation into refinement relations for Z that do not require every
+abstract operation to be matched by exactly one concrete operation.
+<H2>Grey Box Refinement</H2>
+"<a href="http:/pubs/1998/613/">Grey Box Data Refinement</a>" presents
+a generalisation of data
+refinement which takes into account that certain components of the state
+are <i>visible</i>. This is done by interpreting these so-called 
+<i>grey box</i> specifications as ordinary ("black box") specifications
+with additional operations, and simplifying the traditional refinement
+conditions for those.
+
+
+
+<H3>Related projects</H3>
+Past and present research projects in our group are
+<UL>
+<LI><a href="/research/tcs/consistency/">Cross
+Viewpoint Consistency in Open Distributed Processing</a>
+<LI><a href="/research/tcs/openviews">OpenViews</a>
+(officially known as "ODP Viewpoints in a Development Framework")
+<LI><a href="/research/tcs/vqos/vqos.html">V-QoS</a>
+<li><a href="/research/tcs/framework/">A Constructive Framework for Partial
+Specification</a>
+<P>
+<BR><BR><BR>
+<P ALIGN=center>
+<IMG SRC="/buttons/delim.gif" ALT=" " BORDER=0><A HREF="http://www.ukc.ac.uk/"><IMG SRC="/buttons/UKC.gif" BORDER=0 ALT="UKC"></A><IMG SRC="/buttons/delim.gif" ALT=" " BORDER=0><A HREF="/welcome.html"><IMG SRC="/buttons/Dept.gif" BORDER=0 ALT="Department"></A><IMG SRC="/buttons/delim.gif" ALT=" " BORDER=0><A HREF="/research/tcs/index.html"><IMG SRC="/buttons/TCS.gif" BORDER=0 ALT="TCS"></A><IMG SRC="/buttons/delim.gif" ALT=" " BORDER=0><A HREF="/search/index.html"><IMG SRC="/buttons/Search.gif" BORDER=0 ALT="Search"></A><IMG SRC="/buttons/delim.gif" ALT=" " BORDER=0><A HREF="/pubs/index.html"><IMG SRC="/buttons/Pubs.gif" BORDER=0 ALT="Publications"></A><IMG SRC="/buttons/delim.gif" ALT=" " BORDER=0>
+</P>
+    </TD>
+  </TR>
+</TABLE>
+
+<BR>
+
+<P ALIGN="RIGHT">
+  <SMALL>
+  <KBD>
+  <BR>
+  Problems with this page?
+  Contact the <A HREF="mailto:cs-webmaster@ukc.ac.uk">CS Webmaster</A>
+  </KBD>
+  </SMALL>
+</P>
+
+</BODY>
+</HTML>

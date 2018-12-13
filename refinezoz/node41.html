@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.55)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bibliographical Notes</TITLE>
+<META NAME="description" CONTENT="Bibliographical Notes">
+<META NAME="keywords" CONTENT="root">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="root.css">
+
+<LINK REL="previous" HREF="node40.html">
+<LINK REL="up" HREF="node40.html">
+<LINK REL="next" HREF="node42.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html446"
+  HREF="node42.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html444"
+  HREF="node40.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html440"
+  HREF="node40.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html447"
+  HREF="node42.html">Refining CSP and Object-Z</A>
+<B> Up:</B> <A NAME="tex2html445"
+  HREF="node40.html">Combining CSP and Object-Z</A>
+<B> Previous:</B> <A NAME="tex2html441"
+  HREF="node40.html">Combining CSP and Object-Z</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001810000000000000000"></A>
+<A NAME="ch:cspoz:sec:related"></A>
+<BR>
+Bibliographical Notes
+</H1>
+
+<P>
+CSP is one of a family of process algebras, other similar languages
+include CCS<A NAME="842"></A> [<A
+ HREF="node45.html#Milner89">160</A>] and the ISO standard 
+LOTOS<A NAME="844"></A> [<A
+ HREF="node45.html#lotos1">24</A>].
+Introductions to CSP include the texts by Hoare [<A
+ HREF="node45.html#Hoare85a">121</A>], 
+Roscoe [<A
+ HREF="node45.html#Roscoe98a">172</A>]
+and Schneider [<A
+ HREF="node45.html#Schneider00a">173</A>].
+
+<P>
+There are a number of possible approaches to combining state-based
+languages with process algebras.
+The composition of Object-Z classes with CSP operators was first
+detailed by Smith in [<A
+ HREF="node45.html#Smith97a">180</A>], see also the work of Smith and Derrick
+[<A
+ HREF="node45.html#Smith00b">183</A>,<A
+ HREF="node45.html#Smith97b">182</A>] which consider, in addition, refinement and 
+verification in this notation.
+In [<A
+ HREF="node45.html#Fischer97b">87</A>] Fischer and Smith consider the infinite trace model
+as an alternative semantics for combinations of CSP and Object-Z.
+
+<P>
+Alternative approaches to combining Z or Object-Z with CSP or CCS include
+the work of Fischer [<A
+ HREF="node45.html#Fischer97a">84</A>], Mahony and Dong 
+[<A
+ HREF="node45.html#Mahony00a">155</A>,<A
+ HREF="node45.html#Mahony98a">154</A>], 
+Galloway and Stoddart [<A
+ HREF="node45.html#Galloway97a">93</A>]
+and Taguchi and Araki [<A
+ HREF="node45.html#Taguchi97a">199</A>]. A survey of some of these 
+approaches is given in [<A
+ HREF="node45.html#Fischer98a">85</A>].
+
+<P>
+The work of Fischer, for example, also combines Object-Z with CSP
+by using a failure-divergence semantics as the basis for the integration.
+However, Object-Z classes are extended with
+channel definitions and a CSP
+process. In addition, both the precondition and guard of an operation
+are defined and events can either be atomic or have duration (and
+therefore have a start and end).
+The resultant language, called CSP-OZ, is complex but very expressive
+and benefits from a theory of refinement and tool support (see, for
+example, [<A
+ HREF="node45.html#Fischer99a">88</A>]).
+
+<P>
+Mahony and Dong [<A
+ HREF="node45.html#Mahony00a">155</A>] use a combination of Object-Z and timed CSP in
+their TCOZ language. However, instead of
+identifying operations and events, operation parameters are mapped to
+events.
+Similar approaches, where the granularity of operations and events is
+different, but using Z and CCS include the work of Galloway [<A
+ HREF="node45.html#Galloway97a">93</A>]
+and Taguchi and Araki [<A
+ HREF="node45.html#Taguchi97a">199</A>].
+
+<P>
+There has also been similar work on combining CSP with the B<A NAME="861"></A> notation.
+Butler [<A
+ HREF="node45.html#Butler99b">44</A>] uses CSP to control the temporal ordering of B
+operations 
+in a manner similar to the approach discussed in this chapter.
+However, to define the meaning of the specification he defines
+a translation of CSP into B, and therefore uses a restricted subset of CSP.
+
+<P>
+Treharne and Schneider [<A
+ HREF="node45.html#Treharne99a">201</A>] also consider a combination of CSP and
+B. However, in addition to controlling the temporal ordering of events,
+the CSP acts as a control executive for the B machine. That is, in addition
+to inputs communicated from the environment, internal inputs and outputs
+are also passed between the CSP process and the B machine parts of the
+combined specification.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html446"
+  HREF="node42.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html444"
+  HREF="node40.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html440"
+  HREF="node40.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html447"
+  HREF="node42.html">Refining CSP and Object-Z</A>
+<B> Up:</B> <A NAME="tex2html445"
+  HREF="node40.html">Combining CSP and Object-Z</A>
+<B> Previous:</B> <A NAME="tex2html441"
+  HREF="node40.html">Combining CSP and Object-Z</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+E.A.Boiten
+2002-11-22
+</ADDRESS>
+</BODY>
+</HTML>

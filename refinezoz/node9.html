@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.55)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bibliographical Notes</TITLE>
+<META NAME="description" CONTENT="Bibliographical Notes">
+<META NAME="keywords" CONTENT="root">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="root.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html137"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html135"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html131"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html138"
+  HREF="node10.html">Refinement in Z</A>
+<B> Up:</B> <A NAME="tex2html136"
+  HREF="node7.html">Data Refinement and Simulations</A>
+<B> Previous:</B> <A NAME="tex2html132"
+  HREF="node8.html">Errata</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00320000000000000000">
+Bibliographical Notes</A>
+</H1>
+The theory of data refinement presented here was first set out in a
+seminal paper by He, Hoare and Sanders in ESOP'86 [<A
+ HREF="node45.html#Z:He86">111</A>] and
+a companion paper in IPL [<A
+ HREF="node45.html#Hoare87">122</A>],
+following on from an earlier paper by Hoare [<A
+ HREF="node45.html#Hoare72">120</A>].
+A more extensive account of the theory is in [<A
+ HREF="node45.html#He90">110</A>].
+
+<P>
+Using only finite sequences of operations as programs, as was done
+by Woodcock and Davies [<A
+ HREF="node45.html#Woodcock96">209</A>], avoids some of the
+complexity of the general theory. In particular, the combination of unbounded
+non-determinism and recursive programs may cause L<IMG
+ WIDTH="14" HEIGHT="11" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$ {}^{-1}$">-simulation
+to become unsound in a setting of total correctness.
+A lucid explanation of this issue is in Dijkstra's book [<A
+ HREF="node45.html#Dijk76a">72</A>]:
+using Dijkstra's language it is provably impossible to define the
+program ``set <IMG
+ WIDTH="9" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$ n$"> to <EM>any</EM> natural number" such that it is guaranteed to
+terminate.
+
+<P>
+The most comprehensive account of the
+theory of simulations is given in the book
+by de Roever and Engelhardt [<A
+ HREF="node45.html#DeRoever98">60</A>]. This also contains
+theorems stating the circumstances in which upward and downward simulation
+are equivalent or sufficient.  In addition, it contains an
+extensive history and bibliography of the area.
+
+<P>
+The ``contract" approach to partial operations in Z is the traditional
+one; Josephs [<A
+ HREF="node45.html#Josephs91">135</A>] used the behavioural approach in
+specifying reactive systems in Z. Strulo [<A
+ HREF="node45.html#Strulo95">197</A>] describes the
+``firing condition" approach, which differs from the behavioural
+approach described here by viewing an unconstrained operation as divergent.
+The language B [<A
+ HREF="node45.html#Abrial96a">2</A>] has both explicit guards and preconditions.
+Versions of Z with explicit guards added have been explored by Fischer
+[<A
+ HREF="node45.html#Fischer98a">85</A>] and Miarka <EM>et al</EM> [<A
+ HREF="node45.html#Miarka00">158</A>].
+
+<P>
+The totalisation of partial relations and subsequent derivation of
+simulation rules for partial relations is strongly inspired by the
+explanation by Woodcock and Davies [<A
+ HREF="node45.html#Woodcock96">209</A>]. Their book only contains
+the totalisation necessary for the ``contract" approach to ADTs.
+In a paper with Bolton [<A
+ HREF="node45.html#Bolton99">25</A>]
+they also defined totalisation and derived simulations
+in the behavioural approach.
+
+<P>
+A dual approach to totalisation is taken by de Roever and Engelhardt
+who consider the consequences of restricting
+refinement to total relations of a particular shape, <EM>viz.</EM> those which
+(we would say) represent totalised relations.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html137"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html135"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html131"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html138"
+  HREF="node10.html">Refinement in Z</A>
+<B> Up:</B> <A NAME="tex2html136"
+  HREF="node7.html">Data Refinement and Simulations</A>
+<B> Previous:</B> <A NAME="tex2html132"
+  HREF="node8.html">Errata</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+E.A.Boiten
+2002-11-22
+</ADDRESS>
+</BODY>
+</HTML>

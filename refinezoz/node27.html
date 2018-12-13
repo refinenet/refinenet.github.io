@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2K.1beta (1.55)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Erratum</TITLE>
+<META NAME="description" CONTENT="Erratum">
+<META NAME="keywords" CONTENT="root">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="root.css">
+
+<LINK REL="next" HREF="node28.html">
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html314"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/next.png"></A> 
+<A NAME="tex2html312"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/up.png"></A> 
+<A NAME="tex2html306"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/packages/latex2html-2K.1beta/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html315"
+  HREF="node28.html">Bibliographical Notes</A>
+<B> Up:</B> <A NAME="tex2html313"
+  HREF="node26.html">Weak Refinement</A>
+<B> Previous:</B> <A NAME="tex2html307"
+  HREF="node26.html">Weak Refinement</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001110000000000000000">
+Erratum</A>
+</H1>
+The relational definition of weak refinement, Definition 11.2.1
+on page 258, is too strong - both in terms of the subsequent
+definitions and in terms of what is desirable. The correct definition
+would have
+<!-- MATH
+ \begin{displaymath}
+\bigcup \hat{p}_C \subseteq \bigcup \hat{p}_A
+\end{displaymath}
+ -->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="71" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\displaystyle \bigcup \hat{p}_C \subseteq \bigcup \hat{p}_A $">
+</DIV><P></P>
+in place of the quantifications over <IMG
+ WIDTH="16" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \hat{p}_C$"> and <IMG
+ WIDTH="15" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \hat{p}_A$">. A
+counterexample is a system with 1 visible operation and one internal
+one. The abstract internal operation relates the initial state 0 to <IMG
+ WIDTH="8" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ 1$">
+and <IMG
+ WIDTH="8" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ 1$"> to <IMG
+ WIDTH="8" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ 2$">, and in the concrete system relates 0 (initial)
+to <IMG
+ WIDTH="8" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$ 1$"> or <IMG
+ WIDTH="8" HEIGHT="10" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$ 2$">. The visible operation outputs the state in either
+system.
+This satisfies our subsequent definitions of weak refinement, and would
+be seen as a refinement (the difference between 1 or 2 internal
+operations taking place cannot be observable), but does not satisfy
+Definition 11.2.1.
+<BR><HR>
+<ADDRESS>
+E.A.Boiten
+2002-11-22
+</ADDRESS>
+</BODY>
+</HTML>

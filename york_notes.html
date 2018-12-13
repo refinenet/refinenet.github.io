@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<link href="refine.css" rel="stylesheet" type="text/css" />
+<title>
+Notes from York September 2004 Meeting
+</title>
+<style>
+DT { font-weight: bolder; line-height:200%; margin-top: 12px; }
+</style>
+</head>
+
+<body>
+<h1>Notes from York September 2004 Meeting</h1>
+
+<div class="nav">
+ Home ~
+ <a href="meetings.html">Meetings</a> ~
+ <a href="partners.html">Partners</a> ~
+ <a href="tech.html">Technical</a>
+</div>
+
+<h2>Tuesday 7th September</h2>
+
+<p>Present:
+<br/> Jim Woodcock, Steve King, Fiona Pollack, Susan Stepney (York)
+<br/> John Derrick (Sheffield)
+<br/> Richard Banach, Czeslaw Jeske (Manchester)
+<br/> Adrian Hilton (Praxis)
+<br/> Mike Poppleton (Southampton)
+<br/> David Crocker (Escher)
+<br/> Norbert V&ouml;lker(Essex)
+<br/> Ana Cavalcanti, Marcel Oliveira (Kent)
+<br/> Phil Clayton (QinetiQ)
+</p>
+
+<dl>
+
+<dt>15:00: Welcome, introductions</dt>
+
+<dt>15:15: <a href="CSPpurse.pdf">"Mutating the Purse"</a> (Susan Stepney)</dt>
+<dd>Basic security properties (SP): "No value created",
+"All value accounted", "This transfer permitted".  The
+SP comprises functional properties which are preserved by refinement.
+<br/>Modelled in Z.  An abstract model was a world of purses
+with atomic value transfer between purposes.  So easy to show SPs
+hold in this model.  Also a "lost" component which models where
+money goes that hasn't been transferred properly.
+<br/>Concrete model very different - atomic transfer hard.
+There is a value transfer protocol with logging pratocol to
+account for failures - the protocol can be interrupted at any
+point so the proof must show that nevertheless the model
+satisfies the SPs.  Also an "ether" of protocol messages
+in-flight.
+<br/>Main challenge: requirement for backward refinenet rules,
+because there is non-det in abstract and concrete model, and
+since later resolved in concrete than abstract it shafts the
+normal Z refinement.  Also, an infelicity in the model means
+that retrenchment would be applicable: the protocol and ether
+were fixed already by the customer and couldn't be tweaked to
+make the proof work.  You could retrench the finite sequence and
+exception logs, the message hash function (not quite injective) and
+a balance enquirty special state.  Back then, they got around these
+problems with a constructive approach to reality.
+<br/>A formalist might say "don't need retrenchment, I'll change
+the spec".  But the customer says "no, we've already <em>implemented</em> the
+spec" so you can't change it.  Or "We must do it to a particular standard",
+"there's no time", "we need to use the spec for a wide range of platforms and
+this makes it non-general", or "the spec will be too baroque for others".
+Common feature: "oh no you don't"!
+<br/>Definition of a real world problem: you can't change it when
+it becomes too hard.
+<br/>Now: the purse in CSP.
+<br/>"Challenging formal specifications by mutation: a CSP security
+example" - paper (see Susan for details).
+<br/>Here we have a security property of a secure system and an
+abstract model which we want to show satisfies the spec.  It's
+a secure system with a repeated value transfer, ended with a finalisation 
+step.  At finalisation you spit out your value v minus a random r and
+r itself.  Secure if, no matter what value is lost, it is accounted for.
+<br/>The abstract purse spec manages transfers in various ways, then
+at finalisation outputs its values.  3 types of purse: From, To and Other.
+<br/>A From Purse can correctly transfer money, lose the value or ignore the
+transaction.  To Purse works similarly.  Other Purse does nothing.
+<br/>We wrap the whole thing in an ObservedSystem wrapper so that we can
+talk about the security property; we are also (later on) interested in
+the internal behaviour of the purse System.
+<br/>ObservedSystem is the system of purses plus a process to gather
+the finalisation totals, with internal channels hidden.  ObservedSystem
+has security property SecureSystem i.e. does not create value, accounts
+for all lost value.  This was checked with FDR2.
+<br/>Now what?  Extend use of program mutation into spec techniques.
+Program mutation is used to test how good a test suite is.  It measures
+how much coverage the test suite gives you.  Do a mutation (small syntactic
+change) to the program, and see if the mutated program passes the test.
+If caught, great.  If passes, a modelled fault isn't covered by the
+test suite - if original and mutation programs have same behaviour, no
+worries (equivalent mutants) but if different behaviour the harness has
+failed.  Well known technique.  So what about specs?
+<br/>We have property P ("is secure"), spec S (secure system).  Want to show
+that S sat P.  Mutate S to S' with small syntactic change.  Check if S'
+satisfies P.  If not, modelled fault is a single-point vulnerability in
+the spec.  If S' sat P then these are equivalent mutants again.  If
+internal behaviours are different, both systems are secure. So this
+reflects a design decision (you could write the spec different ways).
+If internal behaviours are same, why so?  Has an abstraction been missed?
+<br/>Applied CSP mutation tool with mutation operators and checks they
+are syntactically correct (and usually type correct).  Then use FDR2.
+Did 579 mutant specs, giving: 241 compilation errors, 177 not trace refinements,
+156 trace refinements but failures-divergences violations, 23 FD refinements
+(equivalent mutants) with 20 different internal behaviour, 3 same internal
+behaviour.  Note that these mutations were single-point changes; there is
+clearly scope for more broad multiple-place changes.
+<br/>Equivalent mutants that are also refinements: in most of the cases
+it was just restricted behaviour resulting from strengthened guards e.g.
+sometimes/always ignore the transfer request.  One interesting case
+was when a mutant transfers to other purses rather than the To purse -
+shouldn't be secure, should it?  But FDR claimed a refinement.  That
+was because checks were in a system of only 3 purses!  When you introduced
+a fourth purse ("Other2") into the system, no longer a refinement.  So
+that validated the model-checking choices, and suggested that testing should
+be done in a system with more than 3 purses.
+<br/>It was quite a powerful validation tool.  Made specifiers ask
+different kinds of questions, challenging design decisions and identifying
+potential security vulnerabilities in the spec.  A robust design is when 
+small implementation errors don't break security.
+  </dd>
+
+<dt>16:00: "Recasting Mondex" (Jim Woodcock)</dt>
+<dd>Context of the Grand Challenge in Dependable Systems Evolution
+which requires elucidating and developing basic scientific principles
+that justify confidence in the correct behaviour of software, even
+in the face of extreme threats.  Part of the work is to try out a
+strong software engineering toolset on representative challenge
+problems - like Mondex.
+<br/>Problem needs to be comprehensible to man on the Clapham
+omnibus, with a simplified version publically available, formal
+spec, explanations, theorems, rigorous proof, pushes the state of
+the art and includes two good competing tools (ProofPowerZ and
+Z EVES), and has an active interested community.
+<br/>Observations - tension between exploring the theory (academic)
+and getting the job done (industrial).  Very successful project,
+on time and budget, first to ITSEC E6.
+<br/>Recent investigations suggest that rigorous proofs don't formalise
+easily - they get to the heart of the problem, but it's the edges which
+are the hard bits!  Get to the start of the complete proof, then relate
+the completed proof to the rest of the spec.  One small team spent a
+week with ProofPowerZ trying to formalise the Mondex Z spec.  Very slow
+progress!  Steve King did an independent proof of the verbatim spec given
+in the monograph.  Respect.  The reduced functionality in the monograph
+(reduced by the sanitisation) suggests that Hoare's Law: "inside every
+large program is a small one trying to get out" applies.
+<br/>Why is formalisation difficult?  Some language constructs are
+different: finite sets and functions (repeated proof of finiteness),
+definite descriptions with exactly one value, schemas.  Specification
+structure isn't always helpful for this.  The promotion structure isn't
+reflected in the proof structure.  Promotion explains to the reader, but
+not to the theorem prover.  Linking the informal theorem to the spec text
+is a bit tenuous.
+<br/>Conjecture: Mondex can be restructured so that the proof can be
+mechanised with a high degree of automation.  How far can we get with
+two days of work?  Formalise spec in Z/Eves, compare with ProofPowerZ and
+formalise refinement.
+<br/>Recasting Mondex: the properties are very simple e.g.
+all value accounted for is just credit+debit = credit'+debit'. 
+Summing over a series is pretty simple, so restructure around a 
+pair of sequences.  Two-step update from-to, making the update as
+simple as possible, develop a theory.
+<br/>(Example def'n in Z) "update" is a sequence of integer triples mapping
+onto a sequence of integers.  NB: Z/Eves requires you to prove source set in
+function domain for partial functions, which is annoying, so work on total
+functions for now.  "sum" is sequence of integers mapped to an integer.  
+They are defined inductively by empty, singleton, n-ary.
+<br/>Summing the updated sequences - prove the obvious theorem on 
+the sums of any updated sequence being the same as the sum of the original
+sequence minus the old value plus the new value.  In Z/Eves, set up a set
+of all sequences with the required property and then show that the set of
+integers is a subset of that set.  Empty and singleton are easy.  
+The inductive step is quite hard; the theorem prover isn't good at
+arithmetic and is really bad at generic types.  Some lemmas needed,
+needed to prove that a bijection is finite, that set size will always
+return a natural number.  The final step is a substantial proof by cases.
+<br/>Disappointing - over 50 proof steps to prove an "obvious" theorem.
+Why bother?  Better to redefine "update" by using the "sum" property,
+and use this as the starting point.  It's a perfectly reasonable 
+<em>implicit</em> definition of "update" (debatable...)
+<br/>Bit of tension between uses of a spec and the usability for proof
+since such an implicit definition may hide efficiency, attainability
+issues.
+<br/>Does this help?  A crucial theorem is "doubleUpdate" - update
+one by subtraction and one by addition, and show the sums are the
+same.  Nails about 15 proof steps.
+<br/>Smart cards are indexed by name not number so introduce a 
+map - does this hinder things?  No.  "No value creation" is proved
+fairly easily.  The transfer function domain check is OK.  Now
+try to prove no value creation.  Nearly fully automatic, problem
+lies in summing - need to show that the sum of every sequence is
+natural.  We didn't originally restrict the domain of "sum" because
+of all the domain checks that would result.  Now we need to do the
+check we postponed.  A bit tricky, but comes out OK.  Everything else
+comes out OK, although not fully automatic.    
+<br/>Final proof was 10 defs, 15 theorems, 20 proofs (some paras have
+domain checks and therefore need extra proofs).  About half were proven
+via rewriting (no ingenuity). 15 were proven via apply/use which
+uses a specific proof rule from library or hand-crafted lemma (needs
+ingenuity), 10 using other special tricks (mostly ingenuity).  Most 
+ingenuity was applied in the domain checks.
+<br/>Two day's effort was therefore enough for a radical recast
+of Mondex, making it much simpler: full refinement proof may be possible.
+Generic types in Z/Eves were an issue, but Leonardo Freitas's library
+of results would have helped.  The job got done by exploring the theory.
+You're forced to tackle spec complexity when you use machine techniques.
+<br/>How much should the theorem prover cart pull the horse of specification
+style?  Should we avoid certain techniques in specifications to ease automatic
+proof?  Not necessarily, but need to evaluate how useful specific techniques
+are.
+<br/>Issue of library of proofs - how to distribute, how to know the
+result you want has already been done.
+  </dd>
+
+<dt>17:10: <a href="king_york_notes.pdf">"Another Tale of Two Proofs"</a> (Steve King)</dt>
+<dd>Original Mondex work: rigorous proofs done by hand; experience
+is that current (1995) proof tools aren't yet appropriate for a project
+of that size.
+<br/>Long-term goal to mechanize in ProofPowerZ the proofs in the
+published Mondex spec and design with <em>as few changes as possible</em>.
+Short-term goal over 2 months study at QinetiQ Malvern: learn about
+ProofPowerZ and start on long-term goal.
+<br/>Motivation by Grand Challenge 6: Dependable Systems
+Evolution, and personal interest in automated theorem proving.
+<br/>Results?  Now a reasonable understanding of basic use of
+ProofPower for proving Z conjectures but much more will be needed.
+Proved that the 3 abstract operations maintain certain security
+properties.  The original 2.5 pages of proofs in the specs became
+15.5 pages in the automatic theorem prover output, including lemmas.
+Have started refinement proofs: A [ B (100 pages) and
+B [ C (30 pages).
+<br/>Now we're starting to see whether the proof structure in
+the monograph is reflected in how it's done in ProofPower.
+<br/>Some significant changes were made to published text:
+missing domain checks were added and proven, and some schema 
+quantification in function definitions were changed for ease of proof,
+inconsistencies between operations were fixed (caused by the
+sanitisation process for original publication).
+<br/>Lessons learned: ProofPower-Z was easier than expected to
+use, but documentatioon on basic use could be improved.  The
+sanitisation process isn't easy, with an empty schema (caused
+by hiding all components) and a component where two similarly
+named components were merged.  For real proof, size+res of screen
+display is important - don't use a regular laptop!  Maybe multiple
+screens if you have multiple windows?  Need to be able to refer to
+on-line manual.  Mechanical theorem proving is actually fun.
+<br/>Future plans: continue work on refinement proofs. Can we
+maintain, or improve, the hand proof structure?  Compare with
+Jim Woodcock's work with Z/Eves.  Long-term, automate the proof
+not just mechanise it.
+<br/>Publications: see 
+<a href="http://www-users.cs.york.ac.uk/~susan/bib/ss/e6.htm">Susan
+Stepney's page on the topic</a>.
+<br/>Does pushing the buttons on the proof tool give you the same
+level of understanding of why the proof works as would proving
+it by hand?  The problem is that the bits it can't do aren't the
+interesting bits.  But automation is a real win when you have 
+multiple reworkings.  Perhaps it's at points of proof failure
+that one learns about the proof.
+  </dd>
+
+<dt>19:30: Dinner</dt>
+<dd>La Piazza in York - a good evening out.  We can recommend
+the risotto and tiramis&uacute;.
+ </dd>
+
+</dl>
+
+
+<h2>Wednesday 8th September</h2>
+
+<dl>
+<dt>09:30: Where Refinement Fails (John Derrick)</dt>
+<dd>Example 1: infinite buffer implemented by a bounded buffer
+<br/>Insert operation very simple in the infinite case (append to sequence)
+but more complex in bounded case (handle case of full buffer)
+<br/>Example 2: Adder adds any number, implemented by an adder
+of a number from a bounded type (adds modulo the type size)
+<br/>Other examples: square root with a real specification but
+floating point implementation
+<br/>Noted that there is a general theme of an idealised behaviour
+but reality isn't as ideal.  Reminiscent of fault tolerance - think
+of ideal behaviour, and at a later stage of development have an idea
+of what faults are possible and what happens after a fault.  It's not
+a refinement, but rather a development.  It really is the way that
+we design systems in industry.
+  </dd>
+
+<dt>09:45: <a href="http://www.cs.man.ac.uk/retrenchment/tutorial/Retrenchment.TUTORIAL.pdf">Retrenchment 
+Tutorial</a> (Richard Banach)</dt>
+<dd>Motivation: came out of model-oriented refinement.
+Finiteness gets in the way of your development but you don't
+want to worry about them up front.
+<br/>Example: adding an element to a set.  Concrete world refines
+the set to a sequence, and an implementation where it is turned 
+into a (finite) array.  Oops, at that point typical refinement
+proof obligations can't be met.  So you typically have to go back
+up the refinement path making everything finite.  Tedious.
+<br/>Large systems development is a good example of contrast
+between textbook and real world.  The nice steps of refinement
+go awry between the true abstraction and concrete abstraction.  The
+concrete abstraction becomes impenetrable.  Scaling up makes
+it worse and worse.  Typically exponential difficulty as everything
+tends to interact and so the various finitisms interfere.
+<br/>The "ferocity" of the refinement proof obligations (POs) is
+too high and restricts their application.  So attempt to judiciously
+weaken them.  But refinement is built up on the assumption that you
+can substitute concrete for abstract.  Fiddle with this and you can
+break the whole thing.
+<br/>We are prepared to <strong>forego</strong> these aspects of
+refinement in order to fix the problem.  The refinement "square"
+mapping abstract to concrete and input state to output state gets
+tweaked.  You add an "escape clause" which says that if you can't
+establish the retrieve relation between abs and conc outputs then
+there's another way around it - your retrenchment, a concrete 
+operation.  It can be anything, but you need to be careful what
+it is in practice.
+<br/>The retrenchment definition is complex, includies: abstract
+and concrete operation sets, a retrieve (glueing) relation that
+tells you how the state spaces correspond, the
+within (provided) relation, the output relation, and the new "concedes"
+relation which says what happens when things go wrong.  Then you
+have the usual initialisation proof obligation, then for every
+operation a fairly complex proof obligation.  This latter is the
+starting point for investigating retrenchment.
+<br/>Main differences from refinement: doesn't guarantee concrete
+is faithful to abstract, but rather documents the model change in
+a structured way.  Many more properties of the model are addressable.
+Proof obligation is much more liberal because you have a place to
+put the inconvenient facts about what you're doing.  It's a weaker theory but
+is a generalisation of refinement so has wider applicability.
+<br/>Refinement tends to expel design and risk from the process of
+transforming to concrete.  The abstract and concrete models are tied
+together strongly and can become monolithic - you usually have to
+develop the two together.  Retrenchment can embrace design and risk,
+separating concerns as required.  Rather than "black box" it's
+a "glass box".  You can develop abstract and concrete model independently
+and worry later about how to tie them together.  If you discharge a
+refinement PO then you've made some progress.  If you discharge a 
+retrenchment PO you don't necessarily know if it's going to be useful
+or necessary later on.
+<br/>In the real world, you retrench from true abstract to concrete
+abstract, then refine properly to a concrete implementation.  The
+"autopsy" gives a rationalisation (to domain experts) of the structure
+of the model.
+<br/>Now look at the key issues and opportunities of retrenchment.
+You need to define the algebraic theory of retrenchment and refinement -
+Czeslaw's PhD covers this area.  Composition: if you have two retrenchment
+steps, one after the other (abstract to concrete to implementation) then
+can we compose to a single retrenchment?  Yes.  Retrieve relation is just
+the relational composition.  The within relation is more complex, strengthened
+by the retrieve relation.  The output relation is a straightforward
+composition.  The concedes relation is nastily complex and clearly shows 
+the exponentiality.  In refinement you'd quickly be overwhelmed by the
+"grubbiness", but retrenchment makes you able to define a simple abstraction. 
+This particular case is "plan vanilla" vertical composition.  There are many
+stronger forms.
+<br/>Horizontal composition is harder.  What about when the final configuration
+of one step doesn't satisfy the retrieve and within relation of the next one?
+It turns out that the best way to study this is with the simulation
+relation - replace the implication in the proof obligation with a
+conjunction, and get the set of abs-conc in-out "squares" that fit
+your problem.  This is still under study, but there's a forthcoming
+publication in SAFECOMP showing a nice fault tree extraction from this.
+<br/>"Retrenchment is like refinement except round the edges"
+<br/>There is a more worked-out horizontal composition that Mike 
+Poppleton studied for his PhD.  There is an abs/conc retrenchment given
+by sequential composition of operations, within relation with an initial
+PO and retrieve relation and a wp relating to the operations and second
+step.  The output relations are sequentially composed, and the concessions
+as before.  That works, is associative and relatively clean.  It can
+capture "bulk sequential composition" of operations but is rather
+stronger than the simulation relation.
+<br/>Dataflow composition is a simplification of sequential composition;
+ignore the state, just plug outputs into inputs and it is much better
+behaved than unrestricted horizontal composition.  The within relation
+is just the original within relation, the output relations compose
+sequentially, and the concede relations are the expected combinations.
+<br/>Synchronous parallel composition is done by pairs of variables with
+a similar structure as before.
+<br/>"Fusion composition" is where you have several different retrenchments
+between abstract and concrete.  This can be done with conjunctive composition
+(not too bad) or disjunctive composition (simpler).
+<br/>In all these kinds of composition, the key issues are: does the
+notion compose to give a retrenchment, does this retrenchment satisfy
+the special conditions that you have in mind, and is the notion associative?
+There are all sorts of strengthening of compositions where the second
+and third questions aren't easy to answer.
+<br/>Decomposition mechanisms have been examined by Mike Poppleton
+recently.  Given a retrenchment, suppose we can decompose the
+domain of the operation into some disjunction; then you can
+retrench the individual operations from the disjunction list.
+You could recover the original retrenchment by doing fusion composition.  
+<br/>Algebraic theory of retrenchment and refinement:
+Try to factorise an abs-conc retrenchment into a retrenchment to something
+universal and then a refinement to concrete (or vice versa).  Then
+you look at the family of possible factorisings.  This was Czeslaw's
+M.Sc.  The details are horrendously complex, but have been nailed down
+and do work on real examples.  
+<br/>You can also look at "completing the square": suppose you have
+a refinement from abs to conc, but then you retrench the abs, can you
+refine that retrenchment to something concrete which is itself a
+retrenchment of the original concrete solution?  This gives you the
+refinement of new requirements automatically.
+<br/>It's surprising how complicated it all turned out to be.
+You wouldn't have expected this, but that's how it is.  It's
+been tested on examples and seems to give the right answer, which 
+is encouraging.
+<br/>What you ideally want in such developments is the
+stepwise simulation of fragments, but you don't always get it.
+Retrenchment encourages this form but can't guarantee it as 
+the final configuration of one step need not satisfy the guard
+of the next one.  You could add strengthening assumptions, but
+that misses the point.  Retrenchment is mainly for cases where
+this induction fails, so we deal with simulation directly.
+<br/>Representing these sequences you get "slanted box" patterns
+that represent development steps where you sometimes
+dodge around various situations in abstract and concrete worlds.
+You get some nice simulator transformers for properties, acting
+like the box and diamond operators in a modal algebra.  But the
+mapping of things you can't simulate is completely unconstrained
+and you have to address this somehow.
+<br/>Probabilistic retrenchment - you define probabilities of
+taking various transitions giving you a certain output, which 
+sum to 1 (of course).  You can work out 1-step and n-step
+probabilities of reaching a certain step.  The underlying principles
+are well known from probabilistic transition systems.
+<br/>How does this formal stuff fit in with engineering practice?
+How should individual bits of retrenchment affect practice, and
+how should industrial practice impact retrenchment details?
+For the former, you can generate checklists to see what you should
+be covering in industrial practice corresponding to the various
+within, retrieves, concedes relations.  For the latter, consider how
+retrenchment remit can be widened to take on board non-functional
+requirements.
+<br/>"Retrenchment aims to make quantitive the system engineering
+process as it is at the moment."
+  </dd>
+
+<dt>11:30: <a href="http://www.cs.man.ac.uk/retrenchment/tutorial/Retrenchment.MONDEX.pdf">Retrenchment 
+and Mondex</a> (Mike Poppleton, Richard Banach)</dt>
+<dd>Mike defined the retrenchment rules for schemas, in a similar
+way to forward simulation.
+<br/>Look at the salient aspects of the Mondex model and four
+examples of opportunities for retrenchment.
+<br/>Mondex model: plug two purses into the wallet, type in instructions
+and the money flows as required.  Purses are on their own, assume a 
+hostile environment (e.g. spoofed protocol) and the total balance must
+always be in favour of the bank despite the protocol being halted at any 
+point.
+<br/>The original Mondex refinement, presented (sanitised) in PRG-126
+monograph glosses over a number of things.  Purse numbers are finite, not 
+infinite; the balance enquiry operation interacts badly with resolution
+of nondeterminism during money transfer; the purse log is finite not
+infinite; the log archiving relies on a noninjective hash function  to
+validate clearing of logs.
+<br/>Model architecture: Abstract model (a single requirement)
+B-refines to Between (concrete and global invariants), F-refines
+to Concrete (concrete with infinite domains).  We then retrench
+F-retrench to the Discrete world (concrete with finite domains),
+and do an F-ret from Between to Effective (lifted finite concrete)
+and F-refine from Effective
+to Discrete, then Identity map to Filtered model and B-refine/B-retrench
+from Filtered to Effective.
+<br/>Sequence number: each concrete purse has a sequence number.  In
+the Concrete model it's a natural unbounded number.  In reality and
+Discrete model it's no more than BIGNUM.  Model 0..BIGNUM as a subset
+of Z naturals so all relations and arithmetic is available if it delivers
+an in-range answer.  Example: the IncreasePurseOkay operation; simple
+in C model, more complex in D model.  Data is effective the same but the
+predicates are more complex in D; refinement case, plus the exceptional
+case (if the next sequence number is outside 0..BIGNUM, send a message
+saying that the operation is blocked). You can also rewrite the
+single operation scheme into three schemas - two cases plus the
+decision schema which is an OR of the other two schemas.
+<br/>Retrieve relation here is a straight equality of purse data.
+Within relation is just true.  Output relation is equality of outputs.
+The concedes relation is that: the unmanipulated data in C and D is the
+same, the C sequence number is no less than the D sequence number,
+the C message is bottom and the D message is "blocked".
+<br/>The D world assembles the purses which are indexed by elements
+of set DNAME.  The normal schemas are defined.  Promotion in the
+retrenchment context is more difficult than in refinement, because
+not every component (purse) can be guaranteed to be working.  So
+you can get a NAME-indexed family of retrenchments, each referring to
+the retrenchment of component NAME within the whole.  Eventually
+you can disjunctive-compose these retrenchments to get a full
+retrenchment.
+<br/>We defined world-level retrieve, within and output relations for 
+the Concrete-Discrete model development step.  Not sure that the
+way chosen is the only way, but it seems to work OK.  Within
+relation is equivalence of names plus an instantiation of retrieve
+relation, which is a common trick in retrenchment.  Concedes relation
+at world level says that the unaffected data remains the same, the 
+concrete sequence may be greater than the discrete sequence, and
+the message output will change accordingly.  You can also choose
+other retrieve relations which e.g. give up as soon as one purse
+concedes, or tracks which purses are still good.
+<br/>Lifting can be done when you have a retrench from B to D,
+e.g. via model C, and want to lift it to the E model.  When
+you unravel all the predicates you end up with a schema which
+expresses the various possibilities of failures.   Filtering 
+to the F model; you can use backwards refinement to get back to
+the A model since the only difference between C and D is the
+extra "blocked" message and you can just throw it away.
+<br/>The purse just blocks if the limit on sequence number
+is reached.  Is this reasonable?  Assume you use identical
+distributed random variables from some probability distro.
+Analyse usage frequency and times, test values for BIGNUM and see
+how long we can go.  More sophisticated analysis notes that
+the increments are arrivals of a renewal process - go read
+up on these in the text books, get the equations and plug in
+the numbers.  This gives you 4000 years until run-out at
+100 transactions a day in first-order.  Variance is order of
+a week over 4000 years, which means we're happy there's minimal
+chance of people getting "lucky".
+  </dd>
+
+<dt>12:10: <a href="soot.pdf">Refinement with Approximations</a>
+ (John Derrick)</dt>
+<dd>This is about converging to the idealised behaviour.
+Retrenchment measures this via a predicate.
+<br/>Example: a garbage collector. "Collect all dead cells
+immediately" does it too often, "collect periodically" may
+be none ever etc.  You might try to make a precise version
+with some unparametrised variables.  "Collect n dead cells
+every 1/m seconds" where n,m go to infinity.  Refine,
+retaining n and m; compromise by picking specific values.
+Why compromise late?
+<br/>Example 1: bounded buffer.  Implement by a bounded
+buffer for finite size (say 256).  Where it fails to be
+a refinement doesn't relate to the inputs but rather to the
+state.
+<br/>Example 2: adder.  Implement by Add-N where N is bounded,
+refine to ModAdd-N and instantiate N to maxint.  Here it fails
+at refinement depending on input data not state.
+<br/>Look at sequences of specs with a limit, define metrics
+and limits wrt different criteria.  There are four types of
+step in the development process: element-wise refine (refine each 
+sequence member Sn uniformly), introduce sequence (replace S with
+a sequence {Sn} such that S is the limit of the sequence), 
+instantiate parameter and one other.
+<br/>Example for adder: introduce sequence {Add-n}, elementwise refine
+to {ModAdd-n} and instantiate n to maxint, compromising.
+<br/>Metrics: idea is to define a distance between the limit and
+each sequence element, i.e. an approximation.  Define the distance
+function d(x,y) with the usual distance functin rules.  The limit
+of a sequence is defined as the point of convergence wrt a metric
+and converges as per the usual definitions with shrinking epsilon.
+<br/>First metric: program length.  Assign a distance to specs which
+agree on observations up to a certain length (say 2^-N where N is
+your longest match).   Two specs are "close" if it takes a long 
+time to tell them apart.  It's certainly hard to calculate!  Can
+you show that it's symmetric as metrics must be?  Think so.
+<br/>Buffer example: shortest program that can observe that Buf-n is
+different from Buf has size 2n+2: add first n+1 elements (last one
+is the first ignore), then n Remove operations are successful and
+the next Remove fails.  So d(Buf-n,Buf) = 2 ^-(2n+3) so Buf-n tends
+to Buf as n tends to infinite.
+<br/>Changing the finite buffer spec we get a different distance 
+but still get convergence to the unbounded buffer.  E.g. if we
+insert and remove from the same end then we can see the difference
+more quickly.
+<br/>Need to add an observer to the Add example, to make the
+output visible.  Sequence Init;Add;Ops is enough to see the
+difference - if the input is big enough.  This metric stresses
+quantification over programs at the expense of quantification
+over inputs/outputs.
+<br/>Alternate approach for input/output difference: define
+d in terms of the maximum distance between constituent operations;
+this distance between operation in terms of an asymmetric distance
+based on applicability (to inputs) and correctness (of outputs).
+Return the ratio of failures to size of input domain.  
+Defined as example for the Add: d(Add-N,Add) still tends to 0
+which is fine.
+<br/>Can we do this with infinite data types?  Looks hard
+but it would be useful.
+<br/>How to manage arbitrary i/o types?  Avoid the problem!
+Recognise the nature of approximation of implementation.
+You really will use a bounded data type when you implement
+it, so why not look at how things will be implemented and
+count them in that domain.  Measure failures ratio on
+size of (bounded) implementation set.  But this depends on
+the implementation, and you'd ideally like a metric independent
+of implementation.
+<br/>Open questions on the relation between these metrics and
+other CompSci-type metrics, basis in terms of data refinement,
+topological characteristics, alternatives.  Currently working
+to define "uniform" in the definition of element-wise refinement
+(apply refinement uniformly to each Sn).
+  </dd>
+
+<dt>13:50: Mondex in Perfect Developer (David Crocker)</dt>
+<dd>Put together the abstract model and two security properties
+in Perfect developer. Purse class with two state variables
+balance and lost, a function on sufficient funds and schemas 
+for operations.  Made purses a sequence rather than a mapping - 
+Perfect Developer is better at sequences than mappings at 
+the moment.  Last class represents the abstract world, with
+functions observing total balances of all purses and the
+total lost from all purses.
+<br/>Can't yet do non-det choice between schemas in PD so
+have combined three original schemas into one.  Put the
+security properties in as assertions in this schema (no
+value created, all value accounted for).
+<br/>Generates 23 proof obligations: 2 security properties
+and 21 domain checks.  All these are proven automatically;
+all of them very quick apart from "all value accounted for" - 
+that takes about a minute.  Took about 2 hours to get 
+working from scratch.
+<br/>Effort in moving from sequences to mappings: quick in
+rewriting the model, but prover needs extra rules adding in.
+Noted that most proof tools omit schemas, and PD's schemas
+are quite nice.
+  </dd>
+
+<dt>14:00: <a href="http://www-users.cs.york.ac.uk/~susan/bib/ss/security/371.htm">Refinement and Security</a> (John Clark)</dt>
+<dd>What is security?  Used to drive formal methods
+research.  Example: "stop people reading what they shouldn't"? 
+It's a start, but not the whole story.  First model:
+Bell La Padula.  Security level N may not read a greater
+security level ("no read up"), or write to a lower security level
+("no write down").
+<br/>But not without its problems.  In practice, objects lie
+outside the model, and access is not policed.  File locks
+and names, for instance, can act as information conduits for 
+information transfer.  NB: even classifications have classifications!
+"Top Secret" is not top secret, but "Eyes Only: Foo" may be top secret
+(existence of security level Foo).
+<br/>Covert channels - computers provide channels for inter-
+subject communication, e.g. files.  They are <em>intended</em> to
+allow communication and access to them can be policed by the
+system.  Covert channels are unusual means of communicating
+information.  They arise because subjects share resources e.g.
+CPU, memory.  The resources allow one subject (the transmitter) to
+modulate some aspect of how another subject (the receiver) perceives
+the system.  Usually grouped into <em>storage channels</em> (I affect
+the data you see) and <em>timing channels</em> (I affect when you see data).
+<br/>Bell LaPadula's idea "System Z" - start in a secure state,
+where no-one can read a document above their clearance.  Make
+only transitions that preserve that property.  Do you maintain
+security?  Not exactly.  You can downgrade everything to the
+lowest classification and allow anyone access.
+<br/>A better model "Non-interference" by Goguen and
+Meseguer.  Actions by high level subjects should not be visible
+to lower level subjects.  It is formulated in terms of trace
+validity: if trace t is valid, trace t with all high level
+security events *missing* must be valid too.  Generally
+considered too strong to implement effectively.  In practice,
+ruling out every bit of information flow is not the aim.
+We may wish to allow communication but only via specific channels
+(conditional non-interference).
+<br/>Formal methods: in the maths, f(x) just is.  But in computation
+you need to calculate f(x) on real hardware, consuming power.
+The amount and pattern of intellectual work you have to do
+varies according to the data you're multiplying.  Smartcards,
+for instance, often leak info in terms of their power consumption.
+The first refinement problem - non-functional characteristics
+like resource information (power, time taken) leak information.
+<br/>Is this what security is all about?  No.  Confidentiality
+is only one part of security.  Also: integrity (if we know what
+this means), availability, anonymity (not usually just all-or-nothing),
+accountability / non-repudiation.
+<br/>Breaking the Model: in the relational model of refinement,
+the finalisation can break security.  It is the process of moving
+from the abstract or concrete world of programming variables to
+"real", but still modelled, world.  It says how you interpret
+programming variables.  E.g. a clock that is 5 minutes slow  -
+finalise to make it right by adding 5 minutes.  If the clock is
+stopped, no finalisation view ("glasses") can make it right.
+Finalisation is a great way of passing information!
+<br/>Would be nice to restrict finalisation, but in practice
+you need to send concrete things e.g. bit streams, voltages etc.
+So forbidding the problem merely moves it somewhere more covert.
+Instead, use concept of finalisation to categorise and expose
+covert channels.
+<br/>Vary your finalisation glasses: remove the glasses
+(e.g. view page faults, interrupts, power, timing), enhance
+your view - post-process by viewing sequences of outputs and
+do statistical analysis, multiple viewpoints - use multiple
+different glasses, invasive - break into the device.  
+<br/>Vary the system: perturb it by adding load, irradiating it, 
+flexing a smartcard; passive perturbation where the card is 
+worn out or faulty; multiple systems allow differential analyses;
+heterogenous multiples where "sameness" depends on the observation.
+<br/>Vary the environment: heat or cool it, modulate power supply.
+Cold can lower noise and defeat blinding defences.  At -60C RAM
+doesn't lose information as quickly as you might think. 
+<br/>Examples: fault injection, bit flip breaking RSA (intended
+finalisation, single system, perturbed); differential power
+analysis of smart cards (unintended finalisation, enhanced, single
+system); static RAM persists for minutes at -20C (unintended
+finalisation, single system, perturbed environment).
+<br/>Prevention: enforce use of the glasses, e.g. by a protective
+screen.  Implement "magic eye" glasses when there is noise
+without them.  Detect unwanted finalisations (mainly invasive ones)
+and then destroy the secrets.
+<br/>Finalise the user - dynamics of hand signatures, text analyses
+for authorship; this gives anonymity vs authentication tradeoffs.
+Destructive quantum finalisation - look at something and it breaks,
+essential in various security schemes.
+  </dd>
+
+<dt>15:00: Closing</dt>
+<dd>Location for next meeting: Kent or Sheffield?  John Derrick
+to investigate.  January some time, call for talks etc. to come out
+soon.  Based on Foundations.
+<br/>1-day refinement workshop  co-located with ZB in Surrey
+(April 14th or so).  Exact date to be agreed with Steve and Helen.  
+Maybe get ENTCS publication of the papers, journal special issue
+with extended versions.  CFP date - deadline later than the ZB
+one.
+<br/>The meeting after that - Manchester in July perhaps?
+September in Southampton for RODIN 1-year anniversary perhaps?
+Topics might be selected from OO/UML, distributed and concurrent
+systems, integrated notations.
+<br/>Expenses for this meeting - expense claims to John at
+Kent, mail John for a copy if we haven't got one.
+<br/>Website: add new links page, add tools page with notes about
+how tools are used with refinement (and citations if appropriate).
+Full names on Partners page.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+  </dd>
+
+</dl>
+
+<hr/>
+</body>
+</html>
